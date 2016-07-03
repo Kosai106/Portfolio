@@ -1,0 +1,48 @@
+nav {
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  margin-top: -50px;
+  background: $white;
+  color: $dark-grey;
+  box-shadow: 0 3px 24px rgba($black,.25);
+  .container {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    .logo {
+      a {
+        color: $primary;
+        text-decoration: none;
+        padding: 15px 8px;
+        transition: all .2s ease-in-out 0s;
+        &:hover {
+          color: $primary;
+          box-shadow: 0 -3px 0px $primary inset;
+        }
+      }
+    }
+    .links {
+      a {
+        color: $light-grey;
+        text-decoration: none;
+        margin-right: 14px;
+        padding: 15px 8px;
+        transition: all .2s ease-in-out 0s;
+        &:last-of-type {
+          margin-right: 0;
+        }
+        &:hover {
+          color: $primary;
+          box-shadow: 0 -3px 0px $primary inset;
+        }
+      }
+    }
+  }
+  .active {
+    color: $primary !important;
+    box-shadow: 0 -3px 0px $primary inset !important;
+  }
+}

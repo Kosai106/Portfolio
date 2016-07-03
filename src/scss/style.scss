@@ -1,0 +1,73 @@
+@import "./colors";
+@import "./copy";
+
+@import "./navigation";
+
+body {
+  background: $white;
+  -webkit-font-smoothing: antialiased;
+  font-family: $family;
+  font-size: 1em;
+  height: 100%;
+  color: $dark-grey;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 28px 0;
+}
+
+#hero {
+  margin-top: 50px;
+  padding: 28*4px 0;
+  background: $dark-grey;
+  background: linear-gradient(45deg, rgba($dark-grey, .75) 0%, rgba($dark-grey, .75) 100%), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/46557/bigstock-Businessman-Signing-An-Agreeme-88320248_small.jpg);
+  background-position: center;
+  background-size: cover;
+  color: $white;
+  .cta {
+    display: inline-block;
+    color: $secondary;
+    border: 2px solid $secondary;
+    border-radius: 2px;
+    text-transform: uppercase;
+    padding: 14px 28px;
+    text-decoration: none;
+    transition: all .2s ease-in-out 0s;
+    &:hover {
+      background: $secondary;
+      color: $white;
+    }
+  }
+}
+
+#about {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    .avatar {
+      img {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+      }
+    }
+    .details {
+
+    }
+  }
+}
+
+.text--center {
+  text-align: center;
+}
+
+.push--down {
+  margin-top: 28px;
+}
