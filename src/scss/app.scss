@@ -1,7 +1,9 @@
-@import "./colors";
-@import "./copy";
+@import "vendor/csswizardry-grids";
+@import "global/all";
+@import "copy";
+@import "styleguide";
 
-@import "./navigation";
+@import "navigation";
 
 body {
   background: $white;
@@ -10,6 +12,11 @@ body {
   font-size: 1em;
   height: 100%;
   color: $dark-grey;
+}
+
+a {
+  text-decoration: none;
+  color: $blue;
 }
 
 .container {
@@ -46,11 +53,8 @@ section {
 }
 
 #about {
+  padding: 28*4px 0;
   .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
     .avatar {
       img {
         border-radius: 50%;

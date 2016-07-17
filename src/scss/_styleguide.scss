@@ -1,0 +1,10 @@
+#styleguide {
+  margin-top: 50px;
+  .container {
+    .row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
