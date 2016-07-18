@@ -1,11 +1,15 @@
 nav {
   z-index: 1000;
-  position: fixed;
+  position: relative;
   width: 100%;
-  margin-top: -50px;
+  //margin-top: -50px;
   background: $white;
   color: $dark-grey;
   box-shadow: 0 3px 24px rgba($black,.25);
+  &.main-nav-scrolled {
+    position: fixed;
+    top: 0px;
+  }
   .container {
     height: 50px;
     display: flex;

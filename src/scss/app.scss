@@ -29,13 +29,16 @@ section {
 }
 
 #hero {
-  margin-top: 50px;
-  padding: 28*4px 0;
+  height: 100vh;
+  padding: 0;
+  //padding: 28*4px 0;
   background: $dark-grey;
   background: linear-gradient(45deg, rgba($dark-grey, .75) 0%, rgba($dark-grey, .75) 100%), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/46557/bigstock-Businessman-Signing-An-Agreeme-88320248_small.jpg);
   background-position: center;
   background-size: cover;
   color: $white;
+  display: flex;
+  align-items: center;
   .cta {
     display: inline-block;
     color: $secondary;
