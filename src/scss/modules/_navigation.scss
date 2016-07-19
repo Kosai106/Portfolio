@@ -3,9 +3,9 @@ nav {
   position: relative;
   width: 100%;
   //margin-top: -50px;
-  background: $white;
-  color: $dark-grey;
-  box-shadow: 0 3px 24px rgba($black,.25);
+  background: $global-white;
+  color: $global-dark-grey;
+  box-shadow: 0 3px 24px rgba($global-black,.25);
   &.main-nav-scrolled {
     position: fixed;
     top: 0px;
@@ -18,19 +18,19 @@ nav {
     align-items: center;
     .logo {
       a {
-        color: $primary;
+        color: $global-primary;
         text-decoration: none;
         padding: 15px 8px;
         transition: all .2s ease-in-out 0s;
         &:hover {
-          color: $primary;
-          box-shadow: 0 -3px 0px $primary inset;
+          color: $global-primary;
+          box-shadow: 0 -3px 0px $global-primary inset;
         }
       }
     }
     .links {
       a {
-        color: $light-grey;
+        color: $global-light-grey;
         text-decoration: none;
         margin-right: 14px;
         padding: 15px 8px;
@@ -39,14 +39,14 @@ nav {
           margin-right: 0;
         }
         &:hover {
-          color: $primary;
-          box-shadow: 0 -3px 0px $primary inset;
+          color: $global-primary;
+          box-shadow: 0 -3px 0px $global-primary inset;
         }
       }
     }
   }
   .active {
-    color: $primary !important;
-    box-shadow: 0 -3px 0px $primary inset !important;
+    color: $global-primary !important;
+    box-shadow: 0 -3px 0px $global-primary inset !important;
   }
 }

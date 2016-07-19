@@ -1,22 +1,16 @@
 @import "vendor/csswizardry-grids";
-@import "global/all";
-@import "copy";
+@import "modules/all";
+@import "partials/all";
 @import "styleguide";
 
-@import "navigation";
 
 body {
-  background: $white;
+  background: $global-white;
   -webkit-font-smoothing: antialiased;
   font-family: $family;
   font-size: 1em;
   height: 100%;
-  color: $dark-grey;
-}
-
-a {
-  text-decoration: none;
-  color: $blue;
+  color: $global-dark-grey;
 }
 
 .container {
@@ -28,29 +22,34 @@ section {
   padding: 28px 0;
 }
 
+#random {
+  padding: 28*4px 0;
+  background: $global-dark-grey;
+  background: linear-gradient(45deg, rgba($global-dark-grey, .75) 0%, rgba($global-dark-grey, .75) 100%), no-repeat center/cover url('https://images.unsplash.com/photo-1429051883746-afd9d56fbdaf?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=a40432a29a1c55fc0b2ec7f1f2271877');
+  color: $global-white;
+}
+
 #hero {
   height: 100vh;
   padding: 0;
   //padding: 28*4px 0;
-  background: $dark-grey;
-  background: linear-gradient(45deg, rgba($dark-grey, .75) 0%, rgba($dark-grey, .75) 100%), url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/46557/bigstock-Businessman-Signing-An-Agreeme-88320248_small.jpg);
-  background-position: center;
-  background-size: cover;
-  color: $white;
+  background: $global-dark-grey;
+  background: linear-gradient(45deg, rgba($global-dark-grey, .75) 0%, rgba($global-dark-grey, .75) 100%), no-repeat center/cover url('http://streetwill.co//uploads/post/photo/228/medium_4iWno4pT-RX1J7qFyhVX3tLzbQuzRObt81zZKGCP1-4.jpg');
+  color: $global-white;
   display: flex;
   align-items: center;
   .cta {
     display: inline-block;
-    color: $secondary;
-    border: 2px solid $secondary;
+    color: $global-secondary;
+    border: 2px solid $global-secondary;
     border-radius: 2px;
     text-transform: uppercase;
     padding: 14px 28px;
     text-decoration: none;
     transition: all .2s ease-in-out 0s;
     &:hover {
-      background: $secondary;
-      color: $white;
+      background: $global-secondary;
+      color: $global-white;
     }
   }
 }

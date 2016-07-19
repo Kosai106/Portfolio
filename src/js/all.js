@@ -1,16 +1,18 @@
 import React               from 'react'
-import { StickyContainer } from 'react-sticky';
+import { StickyContainer } from 'react-sticky'
 import Navigation          from './navigation'
-import Section             from './section'
-import About               from './about/about'
+import Hero                from './hero'
+import Random              from './sections/random'
+import About               from './sections/about'
 import Styleguide          from './styleguide'
 
 class All extends React.Component {
     render() {
         return (
           <StickyContainer>
-            <Section name="Kevin Østerkilde" ctaName="Get started" ctaUrl="#about"/>
+            <Hero name="Kevin Østerkilde" ctaName="Get started" ctaUrl="#about"/>
             <Navigation />
+            <Random />
             <Styleguide />
             <About />
           </StickyContainer>
