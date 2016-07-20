@@ -1,0 +1,6 @@
+#random {
+  padding: 28*4px 0;
+  background: $global-dark-grey;
+  background: linear-gradient(45deg, rgba($global-dark-grey, .75) 0%, rgba($global-dark-grey, .75) 100%), no-repeat center/cover url('https://images.unsplash.com/photo-1429051883746-afd9d56fbdaf?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=a40432a29a1c55fc0b2ec7f1f2271877');
+  color: $global-white;
+}

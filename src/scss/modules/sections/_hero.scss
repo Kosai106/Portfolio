@@ -1,0 +1,24 @@
+#hero {
+  height: 100vh;
+  padding: 0;
+  //padding: 28*4px 0;
+  background: $global-dark-grey;
+  background: linear-gradient(45deg, rgba($global-dark-grey, .75) 0%, rgba($global-dark-grey, .75) 100%), no-repeat center/cover url('http://streetwill.co//uploads/post/photo/228/medium_4iWno4pT-RX1J7qFyhVX3tLzbQuzRObt81zZKGCP1-4.jpg');
+  color: $global-white;
+  display: flex;
+  align-items: center;
+  .cta {
+    display: inline-block;
+    color: $global-secondary;
+    border: 2px solid $global-secondary;
+    border-radius: 2px;
+    text-transform: uppercase;
+    padding: 14px 28px;
+    text-decoration: none;
+    transition: all .2s ease-in-out 0s;
+    &:hover {
+      background: $global-secondary;
+      color: $global-white;
+    }
+  }
+}
