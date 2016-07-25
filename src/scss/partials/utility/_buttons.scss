@@ -1,0 +1,14 @@
+.cta {
+  display: inline-block;
+  color: $global-secondary;
+  border: 2px solid $global-secondary;
+  border-radius: 2px;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  text-decoration: none;
+  transition: all .2s ease-in-out 0s;
+  &:hover {
+    background: $global-secondary;
+    color: $global-white;
+  }
+}

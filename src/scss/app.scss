@@ -17,3 +17,7 @@ body {
   max-width: 980px;
   margin: 0 auto;
 }
+
+.sticky {
+  z-index: z-index(vendor);
+}
