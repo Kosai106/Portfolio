@@ -29,11 +29,15 @@ nav {
       }
     }
     .links {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       a {
+        display: flex;
         color: $global-light-grey;
         text-decoration: none;
         margin-right: 14px;
-        padding: 15px 8px;
+        padding: 16px 8px;
         transition: all .2s ease-in-out 0s;
         &:last-of-type {
           margin-right: 0;
@@ -41,6 +45,9 @@ nav {
         &:hover {
           color: $global-primary;
           box-shadow: 0 -3px 0px $global-primary inset;
+        }
+        .fa {
+          font-size: 2em;
         }
       }
     }
