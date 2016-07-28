@@ -1,11 +1,27 @@
-var debug   = process.env.NODE_ENV !== "production";
-var webpack = require('webpack');
-var path    = require('path');
+const debug   = process.env.NODE_ENV !== "production";
+const webpack = require('webpack');
+const path    = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const PATHS = {
+  src: path.join(__dirname, 'src'),
+  build: path.join(__dirname, 'build')
+};
 
 module.exports = {
-  context: path.join(__dirname, "src"),
+  entry: {
+    src: PATHS.src
+  },
+  output: {
+    path: PATHS.build,
+    filename: '[name].js'
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Webpack demo'
+    })
+  ],
   devtool: debug ? "inline-sourcemap" : null,
-  entry: "./js/app.js",
   module: {
     loaders: [
       {
@@ -22,10 +38,6 @@ module.exports = {
         loader: 'style-loader!css-loader!sass-loader'
       }
     ]
-  },
-  output: {
-    path: __dirname + "/src/",
-    filename: "app.min.js"
   },
   plugins: debug ? [] : [
     new webpack.optimize.DedupePlugin(),
