@@ -1,3 +1,3 @@
-var component = require('./js/app');
+const component = require('./js/app');
 
 document.body.appendChild(component());
