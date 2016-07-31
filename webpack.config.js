@@ -25,27 +25,15 @@ module.exports = {
   module: {
     eslint: {
       configFile: 'path/.eslintrc',
+      quiet: true,
     },
-    preLoaders: [
-      {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        loader: 'eslint-loader',
-      },
-    ],
     loaders: [
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['react', 'es2015', 'stage-0'],
-          plugins: [
-            'react-html-attrs',
-            'transform-class-properties',
-            'transform-decorators-legacy',
-          ],
-        },
+        loaders: [
+          'babel-loader?presets[]=es2015,presets[]=stage-0,presets[]=react,plugins[]=react-html-attrs,plugins[]=transform-class-properties,plugins[]=transform-decorators-legacy',
+        ],
       },
       {
         test: /\.scss/,

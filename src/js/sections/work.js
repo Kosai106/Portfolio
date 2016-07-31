@@ -1,5 +1,18 @@
 import React from 'react';
 
+const projects = require('json!./../../json/data.json');
+
+const Data = function Data() {
+  return (
+    <a href="#1" key={projects.id}>
+      <div className="grid__item desk--one-quarter lap--one-half palm--one-whole">
+        <p>Project #1</p>
+        <img role="presentation" src="./img/three_dee/SD_02.jpg" />
+      </div>
+    </a>
+  );
+};
+
 const Work = function Work() {
   return (
     <section className="text--center" id="work">
@@ -39,10 +52,7 @@ const Work = function Work() {
         <div className="grid__item desk--one-half lap--one-whole palm--one-whole">
           <div className="chamber-triple--sides">
             <p className="typography--gamma">Herringbone</p>
-            <p className="typography--regular">
-              Been working on a very detailed wood generator, which I recently finished, so I
-              figured I'd better use it for something. Thus the herringbone floor was created.
-            </p>
+            <p className="typography--regular">Been working on a very detailed wood generator, which I recently finished, so I figured I'd better use it for something. Thus the herringbone floor was created.</p>
           </div>
         </div>
       </div>
@@ -50,10 +60,7 @@ const Work = function Work() {
         <div className="grid__item desk--one-half lap--one-whole palm--one-whole">
           <div className="chamber-triple--sides">
             <p className="typography--gamma">Herringbone</p>
-            <p className="typography--regular">
-              Been working on a very detailed wood generator, which I recently finished, so I
-              figured I'd better use it for something. Thus the herringbone floor was created.
-            </p>
+            <p className="typography--regular">Been working on a very detailed wood generator, which I recently finished, so I figured I'd better use it for something. Thus the herringbone floor was created.</p>
           </div>
         </div>
         <a href="#4">
