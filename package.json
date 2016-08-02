@@ -38,7 +38,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "scripts": {
-    "dev": "./node_modules/.bin/webpack-dev-server --content-base src --inline --hot",
+    "dev": "./node_modules/.bin/webpack-dev-server --content-base src --inline --hot --host 0.0.0.0",
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
