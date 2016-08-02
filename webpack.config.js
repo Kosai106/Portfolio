@@ -2,6 +2,9 @@ const debug = process.env.NODE_ENV !== 'production';
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const autoprefixer = require('autoprefixer');
+const precss = require('precss');
 
 const PATHS = {
   src: path.join(__dirname, 'src'),
@@ -16,16 +19,10 @@ module.exports = {
     path: PATHS.build,
     filename: '[name].js',
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: 'Webpack demo',
-    }),
-  ],
   devtool: debug ? 'inline-sourcemap' : null,
   module: {
     eslint: {
       configFile: 'path/.eslintrc',
-      quiet: true,
     },
     loaders: [
       {
@@ -36,12 +33,24 @@ module.exports = {
         ],
       },
       {
-        test: /\.scss/,
-        loader: 'style-loader!css-loader!sass-loader',
+        test: /\.(scss|sass)$/,
+        loader: ExtractTextPlugin.extract(
+          'style',
+          'css!postcss!sass'
+        ),
       },
     ],
   },
-  plugins: debug ? [] : [
+  postcss: function Prefixer() {
+    return [precss, autoprefixer];
+  },
+  plugins: debug ? [
+    new ExtractTextPlugin('[name].css'),
+    //new HtmlWebpackPlugin({
+    //  title: 'Webpack demo',
+    //  inject: 'body',
+    //}),
+  ] : [
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),

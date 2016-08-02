@@ -14,22 +14,6 @@ $global-white:         #FFFFFF;
 $global-gold:          #DFBA69;
 $global-silver:        #C9D1D3;
 
-//-- Font -------------------------------------------------------------
-
-.font-primary         { color: $global-primary !important; }
-.font-secondary       { color: $global-secondary !important; }
-.font-blue            { color: $global-blue !important; }
-.font-gold            { color: $global-gold !important; }
-.font-silver          { color: $global-silver !important; }
-
-.font-black           { color: $global-black !important; }
-.font-darkest-grey    { color: $global-darkest-grey !important; }
-.font-dark-grey       { color: $global-dark-grey !important; }
-.font-light-grey      { color: $global-light-grey !important; }
-.font-lightest-grey   { color:  !important; }
-.font-white-tinted    { color: $global-white-tinted !important; }
-.font-white           { color: $global-white !important; }
-
 //-- Background -------------------------------------------------------
 
 .bg-primary         { background-color: $global-primary; }

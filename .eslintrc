@@ -20,8 +20,9 @@
     "React": true,
   },
   "rules" : {
-    "no-unused-vars" : 1,
-    "no-undef" : 2,
+    "arrow-body-style": [0],
+    "no-unused-vars" : [1],
+    "no-undef" : [2],
     "max-len": [0],
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
