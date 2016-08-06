@@ -1,0 +1,139 @@
+@mixin hover-shadow{
+	box-shadow: 0 0 0 rgba(0,0,0,0.2);
+	transition: box-shadow .2s, transform .2s, opacity .2s;
+	&:hover {
+		box-shadow: 0 15px 20px rgba(0,0,0,0.2);
+	}
+}
+
+#main {
+  background-color: $global-dark-grey;
+  background: linear-gradient(45deg, rgba($global-dark-grey, .95) 0%, rgba($global-dark-grey, .95) 100%), no-repeat center/cover url('http://streetwill.co//uploads/post/photo/228/medium_4iWno4pT-RX1J7qFyhVX3tLzbQuzRObt81zZKGCP1-4.jpg');
+  // background: $global-lightest-grey;
+  height: 100vh;
+  padding: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  .container {
+    width: 980px;
+    margin: 0 auto;
+  }
+  .grid {
+    margin-left: 0;
+  }
+  .hero {
+    text-align: center;
+    margin-bottom: 28px;
+    h1, h2, h3, h4, h5, h6, p {
+      color: $global-white;
+    }
+    a {
+      color: $global-primary;
+      transition: all .2s ease-in-out 0s;
+      &:hover {
+        color: $global-white;
+      }
+    }
+    .headline {
+      margin-bottom: 0;
+    }
+    .subline {
+      margin-top: 0;
+    }
+    hr {
+      border-color: $global-primary;
+      width: 50%;
+    }
+    .social {
+      margin: 14px*2 0 14px*3 0;
+      ul {
+        padding: 0;
+        li {
+          display: inline;
+          margin-right: 14px;
+          &:last-of-type {
+            margin-right: 0;
+          }
+          a {
+            background: $global-white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            transition: all .2s ease-in-out 0s;
+            @include hover-shadow;
+            &:hover {
+              background: $global-primary;
+              color: $global-white;
+            }
+          }
+        }
+      }
+    }
+  }
+  form {
+  	max-width: 600px;
+  	display: flex;
+  	flex-direction: column;
+    margin: 0 auto;
+  	.inline {
+  		display: flex;
+  		flex-direction: row;
+  		margin-bottom: 14px;
+      .field {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        &:last-of-type {
+          margin-left: 14px;
+        }
+      }
+  	}
+    label {
+      color: $global-white;
+      padding-bottom: 8px;
+    }
+    input, textarea {
+      border: none;
+      border-radius: 2px 2px 0 0;
+      padding: 14px;
+      resize: none;
+      &:active, &:focus {
+        outline: none;
+      }
+    }
+    input {
+      border-radius: 2px;
+      @include hover-shadow;
+      &:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0px 1000px $global-white inset;
+      }
+    }
+    .bigBox {
+      display: flex;
+      flex-direction: column;
+      @include hover-shadow;
+      button {
+        background: $global-primary;
+        padding: 14px;
+        color: $global-white;
+        box-shadow: none;
+        border: none;
+        border-radius: 0 0 2px 2px;
+        cursor: pointer;
+        transition: all .2s ease-in-out 0s;
+        &:hover {
+          background: $global-white-tinted;
+          color: $global-primary;
+        }
+        &:active, &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}
