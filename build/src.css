@@ -146,6 +146,8 @@
   /* [2] */
   vertical-align: top;
   /* [3] */
+  width: 100%;
+  /* [4] */
   /* [5] */
   /* [5] */
   box-sizing: border-box;
@@ -747,8 +749,7 @@ section {
   padding: 28px 0; }
 
 #hero {
-  height: 100vh;
-  padding: 1px 0;
+  padding: 280px 0;
   background: #282931;
   background: -webkit-linear-gradient(45deg, rgba(40, 41, 49, 0.75) 0%, rgba(40, 41, 49, 0.75) 100%), no-repeat center/cover url("http://streetwill.co//uploads/post/photo/228/medium_4iWno4pT-RX1J7qFyhVX3tLzbQuzRObt81zZKGCP1-4.jpg");
   background: linear-gradient(45deg, rgba(40, 41, 49, 0.75) 0%, rgba(40, 41, 49, 0.75) 100%), no-repeat center/cover url("http://streetwill.co//uploads/post/photo/228/medium_4iWno4pT-RX1J7qFyhVX3tLzbQuzRObt81zZKGCP1-4.jpg");

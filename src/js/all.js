@@ -7,17 +7,15 @@ import Random from './sections/random';
 import About from './sections/about';
 import Styleguide from './styleguide';
 
-const All = function All() {
-  return (
-    <StickyContainer>
-      <Hero name="Kevin Østerkilde" ctaName="Get started" ctaUrl="#about" />
-      <Navigation />
-      <Random />
-      <Work />
-      <Styleguide />
-      <About />
-    </StickyContainer>
-  );
-};
+const All = () =>
+  <StickyContainer>
+    <Hero name="Kevin Østerkilde" ctaName="Get started" ctaUrl="#about" />
+    <Navigation />
+    <Random />
+    <Work />
+    <Styleguide />
+    <About />
+  </StickyContainer>;
+
 
 export default All;
