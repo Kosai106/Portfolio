@@ -1,76 +1,33 @@
 [{
   "social": [
     {
-      "id": 1,
-      "name": "Twitter",
-      "icon": "fa-twitter",
-      "url": "https://twitter.com/Kosai106"
-    },
-    {
-      "id": 2,
-      "name": "LinkedIn",
-      "icon": "fa-linkedin",
-      "url": "https://linkedin.com/in/kosai106"
-    },
-    {
-      "id": 3,
-      "name": "Dribbble",
-      "icon": "fa-dribbble",
-      "url": "https://dribbble.com/Kosai106"
-    },
-    {
-      "id": 4,
-      "name": "Instagram",
-      "icon": "fa-instagram",
-      "url": "https://twitter.com/Kosai106"
-    },
-    {
-      "id": 5,
-      "name": "Codepen",
-      "icon": "fa-codepen",
-      "url": "http://codepen.io/Kosai106/pens/public/"
-    },
-    {
-      "id": 6,
-      "name": "Youtube",
-      "icon": "fa-youtube-play",
-      "url": "https://www.youtube.com/c/Kevin%C3%98sterkilde"
-    },
-    {
-      "id": 7,
-      "name": "Artstation",
-      "icon": "fa-artstation",
-      "url": "https://www.artstation.com/artist/kosai106"
+        "id": 1,
+        "icon": "fa-twitter",
+        "url": "https://twitter.com/Kosai106"
+    }, {
+        "id": 2,
+        "icon": "fa-linkedin",
+        "url": "https://linkedin.com/in/kosai106"
+    }, {
+        "id": 3,
+        "icon": "fa-dribbble",
+        "url": "https://dribbble.com/Kosai106"
+    }, {
+        "id": 4,
+        "icon": "fa-instagram",
+        "url": "https://www.instagram.com/kosai106/"
+    }, {
+        "id": 5,
+        "icon": "fa-codepen",
+        "url": "http://codepen.io/Kosai106/pens/public/"
+    }, {
+        "id": 6,
+        "icon": "fa-youtube-play",
+        "url": "https://www.youtube.com/c/Kevin%C3%98sterkilde"
+    }, {
+        "id": 7,
+        "icon": "fa-heart-o",
+        "url": "https://www.artstation.com/artist/kosai106"
     }
-  ],
-  "projects" : [
-    {
-      "id" : 1,
-      "title" : "Project #1",
-      "description" : "Blog tousled man bun bitters fap, retro letterpress. Try-hard truffaut raw denim brunch, plaid dreamcatcher migas messenger bag fanny pack godard man braid. YOLO distillery cardigan, brunch chia swag selfies post-ironic ennui 90's biodiesel drinking vinegar +1 small batch. Fixie kale chips leggings mustache post-ironic biodiesel, artisan tattooed."
-    },
-    {
-      "id" : 2,
-      "title" : "Project #2",
-      "description" : "Blog tousled man bun bitters fap, retro letterpress. Try-hard truffaut raw denim brunch, plaid dreamcatcher migas messenger bag fanny pack godard man braid. YOLO distillery cardigan, brunch chia swag selfies post-ironic ennui 90's biodiesel drinking vinegar +1 small batch. Fixie kale chips leggings mustache post-ironic biodiesel, artisan tattooed."
-    },
-    {
-      "id" : 3,
-      "title" : "Project #3",
-      "description" : "Blog tousled man bun bitters fap, retro letterpress. Try-hard truffaut raw denim brunch, plaid dreamcatcher migas messenger bag fanny pack godard man braid. YOLO distillery cardigan, brunch chia swag selfies post-ironic ennui 90's biodiesel drinking vinegar +1 small batch. Fixie kale chips leggings mustache post-ironic biodiesel, artisan tattooed."
-    },
-    {
-      "id" : 4,
-      "title" : "Project #4",
-      "description" : "Blog tousled man bun bitters fap, retro letterpress. Try-hard truffaut raw denim brunch, plaid dreamcatcher migas messenger bag fanny pack godard man braid. YOLO distillery cardigan, brunch chia swag selfies post-ironic ennui 90's biodiesel drinking vinegar +1 small batch. Fixie kale chips leggings mustache post-ironic biodiesel, artisan tattooed."
-    }
-  ],
-  "author" : {
-    "first_name" : "Kevin",
-    "last_name" : "Østerkilde",
-    "age" : 24,
-    "job" : "Front-End Developer",
-    "Employer" : "Billetto ApS",
-    "Nationality" : "Danish"
-   }
+  ]
 }]
