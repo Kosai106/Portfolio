@@ -1,15 +1,20 @@
-@mixin hover-shadow{
-	box-shadow: 0 0 0 rgba(0,0,0,0.2);
-	transition: box-shadow .2s, transform .2s, opacity .2s;
+@mixin hover-shadow() {
+	box-shadow: 0 1px 4px rgba($global-black,.2);
+	transition: all .2s ease-in-out 0s;
 	&:hover {
-		box-shadow: 0 15px 20px rgba(0,0,0,0.2);
+		box-shadow: 0 15px 20px rgba($global-black,.2);
 	}
 }
 
+@mixin bg-overlay($color, $overlay, $image) {
+	background: linear-gradient(45deg, rgba($color, $overlay) 0%, rgba($color, $overlay) 100%), no-repeat center/cover url($image);
+}
+
+$bg-img: '~/img/background.jpg';
+
 #main {
   background-color: $global-dark-grey;
-  background: linear-gradient(45deg, rgba($global-dark-grey, .95) 0%, rgba($global-dark-grey, .95) 100%), no-repeat center/cover url('http://streetwill.co//uploads/post/photo/228/medium_4iWno4pT-RX1J7qFyhVX3tLzbQuzRObt81zZKGCP1-4.jpg');
-  // background: $global-lightest-grey;
+  @include bg-overlay($global-dark-grey, .75, $bg-img);
   height: 100vh;
   padding: 0;
 	display: flex;
@@ -28,6 +33,7 @@
     margin-bottom: 28px;
     h1, h2, h3, h4, h5, h6, p {
       color: $global-white;
+			text-shadow: 0 1px 4px rgba($global-black,.2);
     }
     a {
       color: $global-primary;
@@ -43,7 +49,7 @@
       margin-top: 0;
     }
     hr {
-      border-color: $global-primary;
+      border: 1px solid $global-primary;
       width: 50%;
     }
     .social {
@@ -64,8 +70,8 @@
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            transition: all .2s ease-in-out 0s;
             @include hover-shadow;
+            transition: all .2s ease-in-out 0s;
             &:hover {
               background: $global-primary;
               color: $global-white;
@@ -95,6 +101,7 @@
   	}
     label {
       color: $global-white;
+			text-shadow: 0 1px 4px rgba($global-black,.2);
       padding-bottom: 8px;
     }
     input, textarea {
@@ -118,16 +125,18 @@
       flex-direction: column;
       @include hover-shadow;
       button {
+				border: none;
         background: $global-primary;
+        border-top: 1px solid $global-primary;
+				color: $global-white;
         padding: 14px;
-        color: $global-white;
         box-shadow: none;
-        border: none;
         border-radius: 0 0 2px 2px;
         cursor: pointer;
         transition: all .2s ease-in-out 0s;
         &:hover {
-          background: $global-white-tinted;
+          background: $global-white;
+          border-top: 1px solid $global-lightest-grey;
           color: $global-primary;
         }
         &:active, &:focus {

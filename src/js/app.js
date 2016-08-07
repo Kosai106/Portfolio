@@ -8,5 +8,8 @@ require('../scss/app.scss');
 const app = document.getElementById('app');
 
 ReactDOM.render(
-  <Font />, app
+  <Font
+    title="Billetto"
+    link="https://billetto.dk/en/"
+  />, app
 );

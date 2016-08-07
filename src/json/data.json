@@ -1,4 +1,48 @@
 [{
+  "social": [
+    {
+      "id": 1,
+      "name": "Twitter",
+      "icon": "fa-twitter",
+      "url": "https://twitter.com/Kosai106"
+    },
+    {
+      "id": 2,
+      "name": "LinkedIn",
+      "icon": "fa-linkedin",
+      "url": "https://linkedin.com/in/kosai106"
+    },
+    {
+      "id": 3,
+      "name": "Dribbble",
+      "icon": "fa-dribbble",
+      "url": "https://dribbble.com/Kosai106"
+    },
+    {
+      "id": 4,
+      "name": "Instagram",
+      "icon": "fa-instagram",
+      "url": "https://twitter.com/Kosai106"
+    },
+    {
+      "id": 5,
+      "name": "Codepen",
+      "icon": "fa-codepen",
+      "url": "http://codepen.io/Kosai106/pens/public/"
+    },
+    {
+      "id": 6,
+      "name": "Youtube",
+      "icon": "fa-youtube-play",
+      "url": "https://www.youtube.com/c/Kevin%C3%98sterkilde"
+    },
+    {
+      "id": 7,
+      "name": "Artstation",
+      "icon": "fa-artstation",
+      "url": "https://www.artstation.com/artist/kosai106"
+    }
+  ],
   "projects" : [
     {
       "id" : 1,

@@ -1,35 +1,47 @@
 import React from 'react';
 
-const Font = () =>
+// const social = require('json!./../data.json'); // False linting error.
+
+const Font = ({ link, title }) => (
   <section id="main">
     <div className="container">
       <div className="hero">
         <h1 className="headline">Kevin Østerkilde</h1>
         <p className="subline">Designer &amp; Developer</p>
         <hr className="seperator" />
-        <p>Currently employed at a Danish startup - <a href="#">Billetto ApS</a></p>
+        <p>Currently employed at the Danish startup, <a href={link} target="_blank">{title}</a></p>
         <hr className="seperator" />
         <div className="social">
           <h3>Find me here too</h3>
           <ul>
             <li>
-              <a href="#">
+              <a href="https://twitter.com/Kosai106" target="_blank">
                 <i className="fa fa-twitter"></i>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="https://linkedin.com/in/kosai106" target="_blank">
                 <i className="fa fa-linkedin"></i>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="https://dribbble.com/Kosai106" target="_blank">
                 <i className="fa fa-dribbble"></i>
               </a>
             </li>
             <li>
-              <a href="#">
-                <i className="fa fa-behance"></i>
+              <a href="https://www.artstation.com/artist/kosai106" target="_blank">
+                <i className="fa fa-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="http://codepen.io/Kosai106/pens/public/" target="_blank">
+                <i className="fa fa-codepen"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/c/Kevin%C3%98sterkilde" target="_blank">
+                <i className="fa fa-youtube-play"></i>
               </a>
             </li>
           </ul>
@@ -55,6 +67,7 @@ const Font = () =>
         </form>
       </div>
     </div>
-  </section>;
+  </section>
+);
 
 export default Font;
