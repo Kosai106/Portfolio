@@ -1,10 +1,9 @@
 import React from 'react';
 
-const data = 'json!./../json/data.json'; // False linting error.
+const data = require('json!./../json/data.json'); // False linting error.
 
 // Fix this fucking shit
-const Stuff = () =>
-data.social.map((item) => {
+const Stuff = () => data.social.map((item) => {
   return (
     <li key={item.id}>
       <a href={item.url}>
@@ -14,13 +13,13 @@ data.social.map((item) => {
   );
 });
 
-// console.log(Stuff);
+console.log(Stuff);
 
 const Font = ({ link, title }) => (
   <section id="main">
     <div className="container">
       <div className="hero">
-        <h1 className="headline">Kevin Østerkilde</h1>
+        <h1 className="headline">Kevin &Oslash;sterkilde</h1>
         <p className="subline">Designer &amp; Developer</p>
         <hr className="seperator" />
         <p>Currently employed at the Danish startup, <a href={link} target="_blank">{title}</a></p>
