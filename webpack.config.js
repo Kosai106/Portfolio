@@ -1,33 +1,62 @@
-var debug   = process.env.NODE_ENV !== "production";
-var webpack = require('webpack');
-var path    = require('path');
+const debug = process.env.NODE_ENV !== 'production';
+const webpack = require('webpack');
+const path = require('path');
+const NpmInstallPlugin = require('npm-install-webpack-plugin');
+// const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const autoprefixer = require('autoprefixer');
+const precss = require('precss');
+
+const PATHS = {
+  src: path.join(__dirname, 'src'),
+  build: path.join(__dirname, 'build'),
+};
 
 module.exports = {
-  context: path.join(__dirname, "src"),
-  devtool: debug ? "inline-sourcemap" : null,
-  entry: "./js/app.js",
+  entry: {
+    src: PATHS.src,
+  },
+  output: {
+    path: PATHS.build,
+    filename: '[name].js',
+  },
+  devtool: debug ? 'inline-sourcemap' : null,
   module: {
+    eslint: {
+      configFile: 'path/.eslintrc',
+    },
     loaders: [
       {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['react', 'es2015', 'stage-0'],
-          plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy'],
-        }
+        loaders: [
+          'babel-loader?presets[]=es2015,presets[]=stage-0,presets[]=react,plugins[]=react-html-attrs,plugins[]=transform-class-properties,plugins[]=transform-decorators-legacy',
+        ],
       },
       {
-        test: /\.scss/,
-        loader: 'style-loader!css-loader!sass-loader'
-      }
-    ]
+        test: /\.(scss|sass)$/,
+        loader: ExtractTextPlugin.extract(
+          'style', 'css!postcss!sass'
+        ),
+      },
+    ],
   },
-  output: {
-    path: __dirname + "/src/",
-    filename: "app.min.js"
+  postcss: function Prefixer() {
+    return [precss, autoprefixer];
   },
-  plugins: debug ? [] : [
+  plugins: debug ? [
+    new NpmInstallPlugin({
+      save: true, // --save
+    }),
+    new ExtractTextPlugin('[name].css'),
+    //new HtmlWebpackPlugin({
+    //  title: 'Webpack demo',
+    //  inject: 'body',
+    //}),
+  ] : [
+    new NpmInstallPlugin({
+      dev: true, // --save
+    }),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),

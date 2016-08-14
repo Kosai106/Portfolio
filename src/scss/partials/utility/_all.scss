@@ -6,6 +6,10 @@
   margin-top: 28px;
 }
 
+.hidden {
+  display: none !important;
+}
+
 @import "functions";
 @import "z-index";
 @import "push";

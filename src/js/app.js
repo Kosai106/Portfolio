@@ -1,11 +1,15 @@
-import React        from 'react'
-import ReactDOM     from 'react-dom'
-import All          from './all'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import All from './all';
+// import All from './all';
 
 require('../scss/app.scss');
 
-const app = document.getElementById('app')
+const app = document.getElementById('app');
 
 ReactDOM.render(
-  <All />, app
-)
+  <All
+    title="Billetto"
+    link="https://billetto.dk?from=oesterkilde.dk"
+  />, app
+);

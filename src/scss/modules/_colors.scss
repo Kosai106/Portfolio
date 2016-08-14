@@ -1,5 +1,6 @@
 $global-primary:       #FC3565;
 $global-secondary:     #33F3B4;
+$global-yellow:        #EFA300;
 
 $global-blue:          #097DE8;
 
@@ -13,22 +14,6 @@ $global-white:         #FFFFFF;
 
 $global-gold:          #DFBA69;
 $global-silver:        #C9D1D3;
-
-//-- Font -------------------------------------------------------------
-
-.font-primary         { color: $global-primary; }
-.font-secondary       { color: $global-secondary; }
-.font-blue            { color: $global-blue; }
-.font-gold            { color: $global-gold; }
-.font-silver          { color: $global-silver; }
-
-.font-black           { color: $global-black; }
-.font-darkest-grey    { color: $global-darkest-grey; }
-.font-dark-grey       { color: $global-dark-grey; }
-.font-light-grey      { color: $global-light-grey; }
-.font-lightest-grey   { color: $global-lightest-grey; }
-.font-white-tinted    { color: $global-white-tinted; }
-.font-white           { color: $global-white; }
 
 //-- Background -------------------------------------------------------
 
