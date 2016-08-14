@@ -3973,8 +3973,8 @@ a {
 
 #main {
   background-color: #282931;
-  background: -webkit-linear-gradient(45deg, rgba(40, 41, 49, 0.75) 0%, rgba(40, 41, 49, 0.75) 100%), no-repeat center/cover url("/img/background.jpg");
-  background: linear-gradient(45deg, rgba(40, 41, 49, 0.75) 0%, rgba(40, 41, 49, 0.75) 100%), no-repeat center/cover url("/img/background.jpg");
+  background: -webkit-linear-gradient(45deg, rgba(40, 41, 49, 0.75) 0%, rgba(40, 41, 49, 0.75) 100%), no-repeat center/cover url("/img/background-min.jpg");
+  background: linear-gradient(45deg, rgba(40, 41, 49, 0.75) 0%, rgba(40, 41, 49, 0.75) 100%), no-repeat center/cover url("/img/background-min.jpg");
   height: 100vh;
   padding: 0;
   display: -webkit-box;
