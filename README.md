@@ -9,7 +9,7 @@ npm install
 npm run dev
 ```
 
-Now go to http://localhost:8080/
+Now go to [localhost:8080](http://localhost:8080/)
 
 ----
 
