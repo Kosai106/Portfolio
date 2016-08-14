@@ -26,6 +26,10 @@
         "url": "https://www.youtube.com/c/Kevin%C3%98sterkilde"
     }, {
         "id": 7,
+        "icon": "fa-github",
+        "url": "https://github.com/Kosai106"
+    }, {
+        "id": 8,
         "icon": "fa-heart-o",
         "url": "https://www.artstation.com/artist/kosai106"
     }

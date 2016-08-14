@@ -10,6 +10,6 @@ const app = document.getElementById('app');
 ReactDOM.render(
   <Font
     title="Billetto"
-    link="https://billetto.dk/"
+    link="https://billetto.dk?from=oesterkilde.dk"
   />, app
 );
