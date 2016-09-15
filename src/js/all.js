@@ -22,14 +22,14 @@ Console.log("I'm available for hire to do both web-stuff and 3D art!");
 Console.log(' ');
 Console.log('Contact me via the form or directly at: kevin@oesterkilde.dk');
 
-const All = ({ link, title }) => (
+const All = ({ link, title, desc }) => (
   <section id="main">
     <div className="container">
       <div className="hero">
         <h1 className="headline animated fadeIn">Kevin &Oslash;sterkilde</h1>
         <p className="subline">Designer &amp; Developer</p>
         <hr className="seperator" />
-        <p>Currently employed at the Danish startup, <a href={link} target="_blank">{title}</a></p>
+        <p>{desc}, <a href={link} target="_blank">{title}</a></p>
         <hr className="seperator" />
         <div className="social">
           <h3>Find my work here</h3>
@@ -106,6 +106,7 @@ const All = ({ link, title }) => (
 All.propTypes = {
   link: React.PropTypes.string.isRequired,
   title: React.PropTypes.string.isRequired,
+  desc: React.PropTypes.string.isRequired,
 };
 
 export default All;

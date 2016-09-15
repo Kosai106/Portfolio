@@ -9,7 +9,8 @@ const app = document.getElementById('app');
 
 ReactDOM.render(
   <All
-    title="Billetto"
-    link="https://billetto.dk?from=oesterkilde.dk"
+    desc="Currently employed at the Swedish startup"
+    title="Quixel"
+    link="//quixel.se?from=oesterkilde.dk"
   />, app
 );
