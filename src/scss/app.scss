@@ -12,8 +12,21 @@ body {
   font-size: 1em;
   height: 100%;
   color: $global-dark-grey;
+	overflow: hidden;
 }
 
 .sticky {
   z-index: z-index(vendor);
+}
+
+@media (min-width: 601px) {
+	.container {
+		width: 95vw !important;
+	}
+}
+
+@media (min-width: 980px) {
+	.container {
+		width: 980px !important;
+	}
 }

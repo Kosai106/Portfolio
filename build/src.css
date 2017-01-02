@@ -3108,6 +3108,46 @@ nav {
     color: #FC3565 !important;
     box-shadow: 0 -3px 0px #FC3565 inset !important; }
 
+@media (max-width: 600px) {
+  .ghost {
+    display: none; }
+  .form_closed {
+    width: 100%;
+    text-align: center;
+    border: none;
+    background: #FC3565;
+    border-top: 1px solid #FC3565;
+    color: #FFFFFF !important;
+    padding: 14px;
+    box-shadow: none;
+    border-radius: 2px;
+    cursor: pointer; }
+  .form_opened {
+    float: right; }
+  .row button {
+    width: 50%;
+    border: none;
+    background: #FC3565;
+    color: #FFFFFF;
+    padding: 14px;
+    box-shadow: none;
+    border-radius: 0 0 0 2px;
+    cursor: pointer; }
+    .row button:active, .row button:focus {
+      outline: none; }
+    .row button.form_opened {
+      border-radius: 0 0 2px 0;
+      background: #DCDCDC;
+      color: #101012; }
+    .row button.form_closed {
+      width: 100% !important; } }
+
+@media (min-width: 601px) {
+  #form_enable {
+    display: hidden; }
+  .row {
+    display: none; } }
+
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -4134,11 +4174,17 @@ a {
     color: #FFFFFF; }
 
 @media (max-width: 600px) {
+  hr {
+    width: 100%; }
   .container {
     width: 95vw !important; }
   #main {
-    height: 100%;
+    height: calc(100vh - ((14px * 4) * 2));
     padding: 56px 0; }
+    #main .hero .icon {
+      width: 50px !important;
+      height: 50px !important;
+      font-size: 1.3em; }
     #main form .inline {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
@@ -4156,9 +4202,18 @@ body {
   font-family: "Varela Round", sans-serif;
   font-size: 1em;
   height: 100%;
-  color: #282931; }
+  color: #282931;
+  overflow: hidden; }
 
 .sticky {
   z-index: 500000; }
+
+@media (min-width: 601px) {
+  .container {
+    width: 95vw !important; } }
+
+@media (min-width: 980px) {
+  .container {
+    width: 980px !important; } }
 
 /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMuY3NzIiwic291cmNlUm9vdCI6IiJ9*/

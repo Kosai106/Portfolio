@@ -6,6 +6,10 @@
 	}
 }
 
+@mixin size($width: 40px, $height: 40px) {
+	width: $width; height: $height;
+}
+
 @mixin bg-overlay($color, $overlay, $image) {
 	background: linear-gradient(45deg, rgba($color, $overlay) 0%, rgba($color, $overlay) 100%), no-repeat center/cover url($image);
 }
@@ -69,8 +73,7 @@ $bg-img: '~/img/background-min.jpg';
             background: $global-white;
 						fill: $global-primary;
             border-radius: 50%;
-            width: 40px;
-            height: 40px;
+            @include size;
             display: inline-flex;
             justify-content: center;
             align-items: center;
@@ -159,13 +162,25 @@ $bg-img: '~/img/background-min.jpg';
 }
 
 @media (max-width: 600px) {
+	hr {
+		width: 100%;
+	}
+
 	.container {
     width: 95vw !important;
   }
 
 	#main {
-		height: 100%;
+		// Stops vertical scrolling on mobile
+		height: calc(100vh - ((14px * 4) * 2));
 		padding: 14px*4 0;
+		.hero {
+			.icon {
+				width: 50px !important;
+				height: 50px !important;
+				font-size: 1.3em;
+			}
+		}
 		form {
 			.inline {
 				flex-direction: column;
