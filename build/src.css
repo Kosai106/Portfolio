@@ -3123,7 +3123,7 @@ nav {
     border-radius: 2px;
     cursor: pointer; }
   .form_opened {
-    float: right; }
+    float: left; }
   .row button {
     width: 50%;
     border: none;

@@ -119,8 +119,8 @@ export default class All extends React.Component {
 							</div>
 						</div>
 						<div className="row">
-							<button type="submit" value="Send" className={`${toggleForm}`}>Send message</button>
 							<button onClick={(e) => { this.toggleForm(e); }} id="form_enable" className={`${openClass} button`}>{ButtonMessage}</button>
+							<button type="submit" value="Send" className={`${toggleForm}`}>Send message</button>
 						</div>
 					</form>
 				</div>
