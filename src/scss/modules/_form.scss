@@ -28,13 +28,13 @@
 			color: $global-white;
 			padding: 14px;
 			box-shadow: none;
-			border-radius: 0 0 0 2px;
+			border-radius: 0 0 2px 0;
 			cursor: pointer;
 			&:active, &:focus {
 				outline: none;
 			}
 			&.form_opened {
-				border-radius: 0 0 2px 0;
+				border-radius: 0 0 0 2px;
 				background: $global-lightest-grey;
 				color: $global-darkest-grey;
 			}

@@ -1,37 +1,36 @@
 [{
-  "social": [
-    {
-        "id": 1,
-        "icon": "fa-twitter",
-        "url": "https://twitter.com/Kosai106"
-    }, {
-        "id": 2,
-        "icon": "fa-linkedin",
-        "url": "https://linkedin.com/in/kosai106"
-    }, {
-        "id": 3,
-        "icon": "fa-dribbble",
-        "url": "https://dribbble.com/Kosai106"
-    }, {
-        "id": 4,
-        "icon": "fa-instagram",
-        "url": "https://www.instagram.com/kosai106/"
-    }, {
-        "id": 5,
-        "icon": "fa-codepen",
-        "url": "http://codepen.io/Kosai106/pens/public/"
-    }, {
-        "id": 6,
-        "icon": "fa-youtube-play",
-        "url": "https://www.youtube.com/c/Kevin%C3%98sterkilde"
-    }, {
-        "id": 7,
-        "icon": "fa-github",
-        "url": "https://github.com/Kosai106"
-    }, {
-        "id": 8,
-        "icon": "fa-heart-o",
-        "url": "https://www.artstation.com/artist/kosai106"
-    }
-  ]
+    "id": 1,
+    "icon": "",
+    "svg": "<svg width='18' height='18' viewBox='0 0 75 75' xmlns='http://www.w3.org/2000/svg'><path d='M75 14.234c-2.76 1.19-5.758 2.046-8.852 2.379 3.189-1.904 5.616-4.902 6.758-8.47-2.95 1.76-6.282 3.045-9.756 3.711C60.343 8.856 56.345 7 51.92 7c-8.52 0-15.373 6.9-15.373 15.371 0 1.19.143 2.38.38 3.522C24.174 25.227 12.8 19.135 5.234 9.808c-1.333 2.284-2.094 4.901-2.094 7.757 0 5.33 2.712 10.041 6.853 12.801-2.523-.095-4.902-.809-6.948-1.951v.19c0 7.472 5.282 13.658 12.325 15.086-1.285.333-2.665.523-4.045.523-1 0-1.951-.095-2.903-.237 1.951 6.09 7.614 10.517 14.372 10.66-5.282 4.14-11.897 6.567-19.083 6.567-1.285 0-2.475-.048-3.712-.19 6.805 4.377 14.895 6.9 23.604 6.9 28.268 0 43.734-23.414 43.734-43.734 0-.667 0-1.333-.047-2 2.998-2.188 5.615-4.9 7.709-7.946z' fill-rule='evenodd'/></svg>",
+    "url": "https://twitter.com/Kosai106"
+}, {
+    "id": 2,
+    "icon": "fa-linkedin",
+    "svg": "",
+    "url": "https://linkedin.com/in/kosai106"
+}, {
+    "id": 3,
+    "icon": "fa-dribbble",
+    "svg": "",
+    "url": "https://dribbble.com/Kosai106"
+}, {
+    "id": 4,
+    "icon": "fa-instagram",
+    "svg": "",
+    "url": "https://www.instagram.com/kosai106/"
+}, {
+    "id": 5,
+    "icon": "fa-codepen",
+    "svg": "",
+    "url": "http://codepen.io/Kosai106/pens/public/"
+}, {
+    "id": 6,
+    "icon": "fa-github",
+    "svg": "",
+    "url": "https://github.com/Kosai106"
+}, {
+    "id": 7,
+    "icon": "",
+    "svg": "<svg width='18' height='18' viewBox='0 0 1024 893'><polygon points='308.6,144.9 89.4,528 526.2,528' /><path d='M0,690l89.4,155.2l2.3,3.7c15.9,24.9,42.5,41.1,72,43.6l6.2,0.6h563.4L615.6,690H0z' /><path d='M1019.7,657.5l-0.1-0.4c-1-3.7-2.5-7.2-4.4-10.6L674,43.7c-1.2-2.2-2.7-4.2-4.3-6.2l-0.4-0.5c-18-21.1-43.7-34.2-71.3-36.4l-6.2-0.5H417.4L924.2,893l93-166.8c0.6-1.1,1.1-2.2,1.5-3.4v0C1025.3,701.6,1025.7,678.9,1019.7,657.5z' /></svg>",
+    "url": "https://www.artstation.com/artist/kosai106"
 }]

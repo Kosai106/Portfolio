@@ -70,6 +70,7 @@ $bg-img: '~/img/background-min.jpg';
             margin-right: 0;
           }
           a {
+						font-size: 18px;
             background: $global-white;
 						fill: $global-primary;
             border-radius: 50%;
@@ -174,13 +175,6 @@ $bg-img: '~/img/background-min.jpg';
 		// Stops vertical scrolling on mobile
 		height: calc(100vh - ((14px * 4) * 2));
 		padding: 14px*4 0;
-		.hero {
-			.icon {
-				width: 50px !important;
-				height: 50px !important;
-				font-size: 1.3em;
-			}
-		}
 		form {
 			.inline {
 				flex-direction: column;

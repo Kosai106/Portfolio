@@ -3131,12 +3131,12 @@ nav {
     color: #FFFFFF;
     padding: 14px;
     box-shadow: none;
-    border-radius: 0 0 0 2px;
+    border-radius: 0 0 2px 0;
     cursor: pointer; }
     .row button:active, .row button:focus {
       outline: none; }
     .row button.form_opened {
-      border-radius: 0 0 2px 0;
+      border-radius: 0 0 0 2px;
       background: #DCDCDC;
       color: #101012; }
     .row button.form_closed {
@@ -4064,6 +4064,7 @@ a {
           #main .hero .social ul li:last-of-type {
             margin-right: 0; }
           #main .hero .social ul li a {
+            font-size: 18px;
             background: #FFFFFF;
             fill: #FC3565;
             border-radius: 50%;
@@ -4181,10 +4182,6 @@ a {
   #main {
     height: calc(100vh - ((14px * 4) * 2));
     padding: 56px 0; }
-    #main .hero .icon {
-      width: 50px !important;
-      height: 50px !important;
-      font-size: 1.3em; }
     #main form .inline {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
@@ -4215,5 +4212,9 @@ body {
 @media (min-width: 980px) {
   .container {
     width: 980px !important; } }
+
+.centered svg {
+  position: relative;
+  top: 3px; }
 
 /*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMuY3NzIiwic291cmNlUm9vdCI6IiJ9*/
