@@ -162,6 +162,11 @@ $bg-img: '~/img/background-min.jpg';
 	}
 }
 
+svg[role="img"] {
+	width: 20px;
+	height: 20px;
+}
+
 @media (max-width: 600px) {
 	hr {
 		width: 100%;
@@ -188,4 +193,17 @@ $bg-img: '~/img/background-min.jpg';
 			}
 		}
 	}
+
+	svg[role="img"] {
+		width: 30px;
+		height: 30px;
+	}
+
+	li {
+		a.icon {
+			width: 60px !important;
+			height: 60px !important;
+		}
+	}
+
 }

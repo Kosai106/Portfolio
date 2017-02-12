@@ -9,11 +9,13 @@ export default class Socials extends React.Component {
 
 	render() {
 		const socialElements = this.props.content.map((item) => {
-			const icon = !!item.icon.length ? <i className={`fa ${item.icon}`}></i> : <div className="icon centered" dangerouslySetInnerHTML={{ __html: item.svg }}></div>;
+			console.log(item.svg);
 			return (
 				<li key={item.id}>
 					<a className="animated icon" target="_blank" href={item.url}>
-						{icon}
+						<svg role="img" className="fa" viewBox="0 0 100 100">
+							<use xlinkHref={`img/socials/${item.svg}#${item.name}`}></use>
+						</svg>
 					</a>
 				</li>
 			);
