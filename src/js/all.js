@@ -1,11 +1,6 @@
 import React from 'react';
 
 import Socials from '../js/socials';
-import data from '../json/data.json';
-
-const Console = console;
-const message = "Hi there stranger, \n \n Thanks for looking at my site. \n I'm available for hire to do both web-stuff and 3D art! \n Contact me via the form or directly at kevin@oesterkilde.dk \n \n Cheers, \n Kevin Østerkilde.";
-Console.log(message);
 
 export default class All extends React.Component {
 	constructor(props) {
@@ -29,6 +24,7 @@ export default class All extends React.Component {
 
 		return (
 			<section id="main">
+				<a className="resume hidden" href="./../json/resume.json">Download resume.json</a>
 				<div className="container">
 					<div className="hero">
 						<h1 className="headline animated fadeIn">Kevin &Oslash;sterkilde</h1>
@@ -41,7 +37,7 @@ export default class All extends React.Component {
 
 							<div className="social">
 								<h3>Find my work here</h3>
-								<Socials content={data} />
+								<Socials content={this.props.data} />
 							</div>
 						</div>
 					</div>
@@ -69,7 +65,7 @@ export default class All extends React.Component {
 						</div>
 						<div className="row">
 							<button onClick={(e) => { this.toggleForm(e); }} id="form_enable" className={`${openClass} button`}>{ButtonMessage}</button>
-							<button type="submit" value="Send" className={`${toggleForm}`}>Send message</button>
+							<button type="submit" value="Send" className={toggleForm}>Send message</button>
 						</div>
 					</form>
 				</div>
@@ -83,4 +79,5 @@ All.propTypes = {
 	link: React.PropTypes.string.isRequired,
 	title: React.PropTypes.string.isRequired,
 	desc: React.PropTypes.string.isRequired,
+	data: React.PropTypes.array.isRequired,
 };

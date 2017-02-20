@@ -1,0 +1,193 @@
+{
+  "basics": {
+    "name": "Kevin Østerkilde",
+    "label": "Front-End Developer",
+    "picture": "https://s3-eu-west-1.amazonaws.com/oesterkilde.dk/img/avatars/Kevin.png",
+    "email": "kevin@oesterkilde.dk",
+    "phone": "+45 30221564",
+    "website": "http://oesterkilde.dk/",
+    "summary": "Kevin hails from the vikings in the north, specifically Denmark. He never really cared for institutional education but rather focused on self learning through books and online materials. Prior to getting his eyes opened up for web development, he was very into 3D technology and it remains a hobby to this day. He’s got unique problem solving skills and can turn coffee into code at a fast pace!",
+    "location": {
+      "address": "Kildehuset 5 St. 5",
+      "postalCode": "2670",
+      "city": "Hundige",
+      "countryCode": "DK",
+      "region": "Sjælland"
+    },
+    "profiles": [
+      {
+        "network": "Twitter",
+        "username": "Kosai106",
+        "url": "https://twitter.com/kosai106"
+      },
+      {
+        "network": "Github",
+        "username": "Kosai106",
+        "url": "https://github.com/Kosai106"
+      },
+      {
+        "network": "Codepen",
+        "username": "Kosai106",
+        "url": "http://codepen.io/Kosai106/"
+      },
+      {
+        "network": "Artstation",
+        "username": "Kosai106",
+        "url": "https://www.artstation.com/artist/kosai106"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "Freelance",
+      "position": "Designer & Developer",
+      "website": "http://oesterkilde.dk/",
+      "startDate": "2016-09-01",
+      "endDate": "",
+      "summary": "I’ve had the pleasure of working on a few different projects, but the biggest is a Rails application that will be launched early 2017.",
+      "highlights": [
+        "AWS S3, Elastic Beanstalk & Ruby on Rails",
+        "Webpack, React & ES6",
+        "Web optimization & Logo design",
+        "UI/UX consulting"
+      ]
+    },
+    {
+      "company": "Quixel AB",
+      "position": "Community Staff",
+      "website": "http://quixel.se/",
+      "startDate": "2016-09-01",
+      "endDate": "",
+      "summary": "Quixel is a company that creates a suite of tools for game developers to help texture their artwork in the most efficient way possible.",
+      "highlights": [
+        "3D Modeling & Texturing",
+        "VRay pipeline improvements",
+        "Customer support",
+        "General administrative tasks"
+      ]
+    },
+    {
+      "company": "Billetto ApS",
+      "position": "Front-End Developer",
+      "website": "https://billetto.dk/",
+      "startDate": "2015-11-01",
+      "endDate": "2016-08-1",
+      "summary": "Billetto is an event-focused company where both users and organisers can easily create, manage or even find events in their local area.",
+      "highlights": [
+        "HTML/HAML & CSS3/SCSS",
+        "Javascript, ES6 & Grunt",
+        "Ruby on Rails, Webpack & React",
+        "Google Analytics & Tag Manager"
+      ]
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "University of Reading",
+      "area": "Information Technology",
+      "studyType": "",
+      "startDate": "2014-01-01",
+      "endDate": "2014-02-01",
+      "gpa": "",
+      "courses": [
+        "Mobile Games Programming"
+      ]
+    },
+    {
+      "institution": "Roskilde Tekniske Skole",
+      "area": "Information Technology",
+      "studyType": "",
+      "startDate": "2007-01-01",
+      "endDate": "2008-01-01",
+      "gpa": "4.0",
+      "courses": [
+        "Intro to web development",
+        "Intro to C# programming",
+        "Intro to 3D development"
+      ]
+    }
+  ],
+  "awards": [],
+  "publications": [],
+  "skills": [
+    {
+      "name": "Front-End Development",
+      "level": "Professional",
+      "keywords": [
+        "HTML5",
+        "HAML",
+        "CSS3",
+        "SCSS",
+        "Javascript",
+        "React"
+      ]
+    },
+    {
+      "name": "Back-End Development",
+      "level": "Intermediate",
+      "keywords": [
+        "Ruby",
+        "Ruby on Rails",
+        "PostgreSQL",
+        "Amazon Web Services",
+        "Git"
+      ]
+    },
+    {
+      "name": "Design",
+      "level": "Intermediate",
+      "keywords": [
+        "Adobe Photoshop",
+        "Adobe Illustrator",
+        "Sketch"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Danish",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Professional proficiency"
+    },
+    {
+      "language": "Italian",
+      "fluency": "Beginner"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Tech",
+      "keywords": [
+        "Functional programming",
+        "Innovative hardware"
+      ]
+    },
+    {
+      "name": "Lifestyle",
+      "keywords": [
+        "Coffee",
+        "Synthwave music",
+        "Art",
+        "Conferences"
+      ]
+    },
+    {
+      "name": "Video Games",
+      "keywords": [
+        "Playing",
+        "Creating",
+        "Streaming"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "Richard Palmer",
+      "reference": "Kevin provides quality work every time - he makes changes when asked, with a good understanding of what you want straight away.  Great colleague, highly recommended!"
+    }
+  ]
+}

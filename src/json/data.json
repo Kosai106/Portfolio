@@ -1,13 +1,13 @@
 [{
     "id": 1,
-    "name": "Twitter",
-    "svg": "twitter-logo.svg",
-    "url": "https://twitter.com/Kosai106"
+    "name": "Codepen",
+    "svg": "codepen-logo.svg",
+    "url": "http://codepen.io/Kosai106/pens/public/"
 }, {
     "id": 2,
-    "name": "Linkedin",
-    "svg": "linkedin-logo.svg",
-    "url": "https://linkedin.com/in/kosai106"
+    "name": "Github",
+    "svg": "github-logo.svg",
+    "url": "https://github.com/Kosai106"
 }, {
     "id": 3,
     "name": "Dribbble",
@@ -15,22 +15,22 @@
     "url": "https://dribbble.com/Kosai106"
 }, {
     "id": 4,
-    "name": "Instagram",
-    "svg": "instagram-logo.svg",
-    "url": "https://www.instagram.com/kosai106/"
+    "name": "Linkedin",
+    "svg": "linkedin-logo.svg",
+    "url": "https://linkedin.com/in/kosai106"
 }, {
     "id": 5,
-    "name": "Codepen",
-    "svg": "codepen-logo.svg",
-    "url": "http://codepen.io/Kosai106/pens/public/"
-}, {
-    "id": 6,
-    "name": "Github",
-    "svg": "github-logo.svg",
-    "url": "https://github.com/Kosai106"
-}, {
-    "id": 7,
     "name": "Artstation",
     "svg": "artstation-logo.svg",
     "url": "https://www.artstation.com/artist/kosai106"
+}, {
+    "id": 6,
+    "name": "Twitter",
+    "svg": "twitter-logo.svg",
+    "url": "https://twitter.com/Kosai106"
+}, {
+    "id": 7,
+    "name": "Instagram",
+    "svg": "instagram-logo.svg",
+    "url": "https://www.instagram.com/kosai106/"
 }]

@@ -9,7 +9,6 @@ export default class Socials extends React.Component {
 
 	render() {
 		const socialElements = this.props.content.map((item) => {
-			console.log(item.svg);
 			return (
 				<li key={item.id}>
 					<a className="animated icon" target="_blank" href={item.url}>

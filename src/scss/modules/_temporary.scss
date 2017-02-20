@@ -207,3 +207,21 @@ svg[role="img"] {
 	}
 
 }
+
+.resume {
+	position: fixed;
+	top: 28px;
+	right: 28px;
+	color: $global-primary;
+	transition: all .2s ease-in-out 0s;
+	&:hover {
+		color: $global-white;
+	}
+}
+
+@media (max-width: 600px) {
+	.resume {
+		right: 50%;
+		transform: translateX(50%);
+	}
+}
