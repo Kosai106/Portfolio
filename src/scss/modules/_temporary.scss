@@ -12,6 +12,7 @@
 
 @mixin bg-overlay($color, $overlay, $image) {
 	background: linear-gradient(45deg, rgba($color, $overlay) 0%, rgba($color, $overlay) 100%), no-repeat center/cover url($image);
+	background-attachment: fixed;
 }
 
 $bg-img: '~/img/background-min.jpg';

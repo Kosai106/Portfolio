@@ -1,0 +1,58 @@
+@import "../vendor/csswizardry-grids";
+@import "/colors";
+@import "../partials/all";
+
+@mixin bg-overlay($color, $overlay, $image) {
+	background: linear-gradient(45deg, rgba($color, $overlay) 0%, rgba($color, $overlay) 100%), no-repeat center/cover url($image);
+	background-attachment: fixed;
+}
+
+$bg-img: '~/img/background-min.jpg';
+
+body {
+	overflow: auto !important;
+	background-color: $global-dark-grey;
+  @include bg-overlay($global-dark-grey, .75, $bg-img);
+}
+
+.muted {
+	color: rgba($global-dark-grey, .75);
+}
+
+#resume {
+	.container {
+		margin: 0 auto;
+		background-color: $global-white;
+		border-radius: 2px;
+	}
+	.header {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding-left: 24px;
+		padding-right: 24px;
+		.avatar {
+			border-radius: 10px;
+			width: 150px;
+			height: 150px;
+		}
+		.details {
+			flex-direction: column;
+			.title {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				.typography--kilo {
+					font-weight: 600;
+				}
+			}
+		}
+	}
+}
+
+
+@media print {
+	a {
+		color: $global-black;
+	}
+}

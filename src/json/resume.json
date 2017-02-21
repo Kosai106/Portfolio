@@ -1,12 +1,12 @@
 {
   "basics": {
     "name": "Kevin Østerkilde",
-    "label": "Front-End Developer",
-    "picture": "https://s3-eu-west-1.amazonaws.com/oesterkilde.dk/img/avatars/Kevin.png",
+    "label": "Designer & Developer",
+    "picture": "http://oesterkilde.dk/img/avatars/Kevin.png",
     "email": "kevin@oesterkilde.dk",
-    "phone": "+45 30221564",
+    "phone": "+4530221564",
     "website": "http://oesterkilde.dk/",
-    "summary": "Kevin hails from the vikings in the north, specifically Denmark. He never really cared for institutional education but rather focused on self learning through books and online materials. Prior to getting his eyes opened up for web development, he was very into 3D technology and it remains a hobby to this day. He’s got unique problem solving skills and can turn coffee into code at a fast pace!",
+    "summary": "Kevin hails from the vikings in the north, specifically Denmark. He never really cared for institutional education but rather focused on self learning through books and online materials. Prior to getting his eyes opened up for web development, he was very into 3D technology and it remains a hobby to this day. He’s got unique problem solving skills and can turn coffee into code faster than you can say \"Kameloso\"!",
     "location": {
       "address": "Kildehuset 5 St. 5",
       "postalCode": "2670",

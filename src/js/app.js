@@ -1,10 +1,11 @@
 import React from 'react';
 import { render } from 'react-dom';
 import All from './all';
-
-import data from '../json/data.json';
+import Resume from './resume';
 
 require('../scss/app.scss');
+
+import data from '../json/data.json';
 
 const Console = console;
 const message = `Hi there stranger,
@@ -27,3 +28,9 @@ render(
 		data={data}
 	/>, document.getElementById('app')
 );
+
+/*
+render(
+	<Resume />, document.getElementById('app')
+);
+*/
