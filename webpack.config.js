@@ -2,7 +2,6 @@ const debug = process.env.NODE_ENV !== 'production';
 const webpack = require('webpack');
 const path = require('path');
 const NpmInstallPlugin = require('npm-install-webpack-plugin');
-// const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const precss = require('precss');
@@ -41,7 +40,7 @@ module.exports = {
 				loader: 'json',
 			},
 			{
-				test: /\.(scss|sass)$/,
+				test: /\.(css|scss|sass)$/,
 				loader: ExtractTextPlugin.extract(
 					'style', 'css!postcss!sass'
 				),
@@ -60,16 +59,13 @@ module.exports = {
 			save: true, // --save
 		}),
 		new ExtractTextPlugin('[name].css'),
-		//new HtmlWebpackPlugin({
-		//	title: 'Webpack demo',
-		//	inject: 'body',
-		//}),
 	] : [
 		new NpmInstallPlugin({
-			dev: true, // --save
+			dev: true, // --save-dev
 		}),
+		new ExtractTextPlugin('[name].css'),
 		new webpack.optimize.DedupePlugin(),
 		new webpack.optimize.OccurenceOrderPlugin(),
-		new webpack.optimize.UglifyJsPlugin({ mangle: false, sourcemap: false }),
+		new webpack.optimize.UglifyJsPlugin({ mangle: true, sourcemap: false, compress: { warnings: false } }),
 	],
 };
