@@ -6,7 +6,7 @@
     "email": "kevin@oesterkilde.dk",
     "phone": "+4530221564",
     "website": "http://oesterkilde.dk/",
-    "summary": "Kevin hails from the vikings in the north, specifically Denmark. He never really cared for institutional education but rather focused on self learning through books and online materials. Prior to getting his eyes opened up for web development, he was very into 3D technology and it remains a hobby to this day. He’s got unique problem solving skills and can turn coffee into code faster than you can say \"Kameloso\"!",
+    "summary": "Kevin hails from the vikings in the north, specifically Denmark. He never really cared for institutional education but rather focused on self learning through books and online materials. Prior to getting his eyes opened up for web development, he was very into 3D technology and it remains a hobby to this day. He’s got unique problem solving skills and can turn coffee into code faster than you can say \"<a href=\"https://www.youtube.com/watch?v=s-mOy8VUEBk\" target=\"_blank\">Kameloso</a>\"!",
     "location": {
       "address": "Kildehuset 5 St. 5",
       "postalCode": "2670",
@@ -14,41 +14,61 @@
       "countryCode": "DK",
       "region": "Sjælland"
     },
-    "profiles": [
-      {
-        "network": "Twitter",
-        "username": "Kosai106",
-        "url": "https://twitter.com/kosai106"
-      },
-      {
-        "network": "Github",
-        "username": "Kosai106",
-        "url": "https://github.com/Kosai106"
-      },
-      {
-        "network": "Codepen",
-        "username": "Kosai106",
-        "url": "http://codepen.io/Kosai106/"
-      },
-      {
-        "network": "Artstation",
-        "username": "Kosai106",
-        "url": "https://www.artstation.com/artist/kosai106"
-      }
-    ]
+    "profiles": [{
+      "network": "Codepen",
+      "username": "Kosai106",
+      "url": "https://codepen.io/Kosai106/pens/public/"
+    }, {
+      "network": "Github",
+      "username": "Kosai106",
+      "url": "https://github.com/Kosai106"
+    }, {
+      "network": "Dribbble",
+      "username": "Kosai106",
+      "url": "https://dribbble.com/Kosai106"
+    }, {
+      "network": "Linkedin",
+      "username": "kosai106",
+      "url": "https://linkedin.com/in/kosai106"
+    }, {
+      "network": "Artstation",
+      "username": "kosai106",
+      "url": "https://www.artstation.com/artist/kosai106"
+    }, {
+      "network": "Twitter",
+      "username": "Kosai106",
+      "url": "https://twitter.com/Kosai106"
+    }, {
+      "network": "Instagram",
+      "username": "kosai106",
+      "url": "https://www.instagram.com/kosai106/"
+    }]
   },
-  "work": [
-    {
+  "work": [{
       "company": "Freelance",
       "position": "Designer & Developer",
       "website": "http://oesterkilde.dk/",
-      "startDate": "2016-09-01",
+      "startDate": "2017-08-01",
       "endDate": "",
       "summary": "I’ve had the pleasure of working on a few different projects, but the biggest is a Rails application that will be launched early 2017.",
       "highlights": [
-        "AWS S3, Elastic Beanstalk & Ruby on Rails",
-        "Webpack, React & ES6",
-        "Web optimization & Logo design",
+        "AWS S3, EC2 & Elastic Beanstalk",
+        "Webpack, React, ES6 & Ruby on Rails",
+        "Web optimisation & Logo design",
+        "UI/UX consulting"
+      ]
+    },
+    {
+      "company": "Lively. Media",
+      "position": "Lead Developer",
+      "website": "https://getlivelyapp.com/",
+      "startDate": "2016-09-01",
+      "endDate": "2017-07-31",
+      "summary": "I’ve had the pleasure of working on a few different projects, but the biggest is a Rails application that will be launched early 2017.",
+      "highlights": [
+        "AWS S3, EC2 & Elastic Beanstalk",
+        "Webpack, React, ES6 & Ruby on Rails",
+        "Web optimisation & Logo design",
         "UI/UX consulting"
       ]
     },
@@ -57,7 +77,7 @@
       "position": "Community Staff",
       "website": "http://quixel.se/",
       "startDate": "2016-09-01",
-      "endDate": "",
+      "endDate": "2017-06-30",
       "summary": "Quixel is a company that creates a suite of tools for game developers to help texture their artwork in the most efficient way possible.",
       "highlights": [
         "3D Modeling & Texturing",
@@ -82,13 +102,12 @@
     }
   ],
   "volunteer": [],
-  "education": [
-    {
+  "education": [{
       "institution": "University of Reading",
       "area": "Information Technology",
       "studyType": "",
-      "startDate": "2014-01-01",
-      "endDate": "2014-02-01",
+      "startDate": "2014-02-24",
+      "endDate": "2014-04-13",
       "gpa": "",
       "courses": [
         "Mobile Games Programming"
@@ -110,8 +129,7 @@
   ],
   "awards": [],
   "publications": [],
-  "skills": [
-    {
+  "skills": [{
       "name": "Front-End Development",
       "level": "Professional",
       "keywords": [
@@ -120,7 +138,7 @@
         "CSS3",
         "SCSS",
         "Javascript",
-        "React"
+        "ReactJS"
       ]
     },
     {
@@ -129,9 +147,11 @@
       "keywords": [
         "Ruby",
         "Ruby on Rails",
+        "NodeJS",
         "PostgreSQL",
         "Amazon Web Services",
-        "Git"
+        "Git",
+        "Firebase"
       ]
     },
     {
@@ -144,8 +164,7 @@
       ]
     }
   ],
-  "languages": [
-    {
+  "languages": [{
       "language": "Danish",
       "fluency": "Native speaker"
     },
@@ -158,12 +177,12 @@
       "fluency": "Beginner"
     }
   ],
-  "interests": [
-    {
+  "interests": [{
       "name": "Tech",
       "keywords": [
-        "Functional programming",
-        "Innovative hardware"
+        "Programming",
+        "Innovative hardware",
+        "AI & machine learning"
       ]
     },
     {
@@ -172,7 +191,7 @@
         "Coffee",
         "Synthwave music",
         "Art",
-        "Conferences"
+        "Books"
       ]
     },
     {
@@ -184,10 +203,8 @@
       ]
     }
   ],
-  "references": [
-    {
-      "name": "Richard Palmer",
-      "reference": "Kevin provides quality work every time - he makes changes when asked, with a good understanding of what you want straight away.  Great colleague, highly recommended!"
-    }
-  ]
+  "references": [{
+    "name": "Richard Palmer",
+    "reference": "Kevin provides quality work every time - he makes changes when asked, with a good understanding of what you want straight away.  Great colleague, highly recommended!"
+  }]
 }

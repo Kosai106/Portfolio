@@ -17,12 +17,12 @@ export default class Resume extends React.Component {
 	render() {
 		const endDate = (x) => {
 			return (
-				_.isEmpty(x.endDate) ? 'Now' : `${moment(x.endDate, 'YYYY-MM-DD').format('MMM YYYY')}`
+				_.isEmpty(x.endDate) ? 'Now' : `${moment(x.endDate, 'YYYY-MM-DD').format('MMM. YYYY')}`
 			);
 		};
 		const startDate = (x) => {
 			return (
-				moment(x.startDate, 'YYYY-MM-DD').format('MMM YYYY')
+				moment(x.startDate, 'YYYY-MM-DD').format('MMM. YYYY')
 			);
 		};
 
@@ -50,7 +50,7 @@ export default class Resume extends React.Component {
 			});
 
 			return (
-				<div key={hobby.name}>
+				<div key={hobby.name} className="grid__item one-third">
 					<b>{hobby.name}</b>
 					<ul>
 						{keywords}
@@ -74,10 +74,13 @@ export default class Resume extends React.Component {
 			});
 
 			return (
-				<div key={job.company}>
-					<a href={job.website}><h5>{job.company}</h5></a>
-					<p>{job.position}</p>
-					<p>{startDate(job)} - {endDate(job)}</p>
+				<div key={job.company} className="chamber--bottom">
+					<span>
+						<a href={job.website} className="push--right typography--eta">{job.company}</a>
+						<span className="push--right">&middot;</span>
+						<span>{job.position}</span>
+					</span>
+					<span className="typography--milli" style={{ display: 'block' }}>{startDate(job)} - {endDate(job)}</span>
 					<p>{job.summary}</p>
 					<ul>
 						{highlights}
@@ -92,7 +95,7 @@ export default class Resume extends React.Component {
 			});
 
 			return (
-				<div key={item.institution}>
+				<div key={item.institution} className="chamber--bottom">
 					<h5>{item.institution}</h5>
 					<p>{item.area}</p>
 					<span>{startDate(item)} - {endDate(item)}</span>
@@ -109,7 +112,7 @@ export default class Resume extends React.Component {
 			});
 
 			return (
-				<div key={skill.name}>
+				<div key={skill.name} className="chamber--bottom">
 					<h5>{skill.name}</h5>
 					<span>{skill.level}</span>
 					<ul>
@@ -130,30 +133,54 @@ export default class Resume extends React.Component {
 								<span className="typography--gamma muted">{data.basics.label}</span>
 							</div>
 							<div className="basic_details chamber-half--bottom text--center">
-								<a href={data.basics.website} className="grid__item one-third">{data.basics.website}</a>
-								<a href={`mailto:${data.basics.email}`} className="grid__item one-third">{data.basics.email}</a>
-								<a href={`tel:${data.basics.phone}`} className="grid__item one-third">{data.basics.phone}</a>
+								<span className="grid__item one-third">
+									<a href={data.basics.website} className="typography--eta">{data.basics.website}</a>
+								</span>
+								<span className="grid__item one-third">
+									<a href={`mailto:${data.basics.email}`} className="typography--eta">{data.basics.email}</a>
+								</span>
+								<span className="grid__item one-third">
+									<a href={`tel:${data.basics.phone}`} className="typography--eta">{data.basics.phone}</a>
+								</span>
 							</div>
-							<p className="chamber-double--sides chamber-half--bottom">{data.basics.summary}</p>
+							<p className="chamber-double--sides chamber-half--bottom" dangerouslySetInnerHTML={{ __html: data.basics.summary }}></p>
 							<hr />
 						</div>
 					</div>
-					<div className="grid__item one-half">
+					<div className="grid__item three-fifths">
+						<h5>Experience:</h5>
 						{work}
+						<hr className="push-double--bottom" style={{ width: '100%' }} />
+						<div className="grid__item three-fifths" style={{ paddingLeft: '0' }}>
+							<h5>Languages:</h5>
+							<ul>
+								{languages}
+							</ul>
+						</div>
+						<div className="grid__item two-fifths">
+							<h5>Find me here:</h5>
+							<ul>
+								{profiles}
+							</ul>
+						</div>
+						<div className="grid__item one-whole" style={{ paddingLeft: '0' }}>
+							<h5>References:</h5>
+							{references}
+						</div>
 					</div>
-					<div className="grid__item one-half">
+					<div className="grid__item two-fifths">
+						<h5>Education:</h5>
 						{education}
+						<hr className="push-double--bottom" style={{ width: '100%', marginLeft: '-24px' }} />
+						<h5>Skills:</h5>
 						{skills}
 					</div>
-					<div className="header">
+					<hr className="push-double--bottom" style={{ width: 'calc(100% - (24px * 2))' }} />
+					<div className="grid__item one-whole chamber--bottom">
+						<h5>Interests:</h5>
 						<ul>
-							{profiles}
+							{interests}
 						</ul>
-						<ul>
-							{languages}
-						</ul>
-						{interests}
-						{references}
 					</div>
 				</div>
 			</div>

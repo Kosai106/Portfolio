@@ -15,11 +15,19 @@ body {
   @include bg-overlay($global-dark-grey, .75, $bg-img);
 }
 
+.hr--right {
+	border-right: 1px solid $global-dark-grey;
+	margin: 0 14px;
+}
+
 .muted {
 	color: rgba($global-dark-grey, .75);
 }
 
 #resume {
+	a {
+		color: $global-primary;
+	}
 	.container {
 		margin: 0 auto;
 		background-color: $global-white;
@@ -53,6 +61,6 @@ body {
 
 @media print {
 	a {
-		color: $global-black;
+		color: $global-black !important;
 	}
 }

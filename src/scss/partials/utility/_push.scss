@@ -6,10 +6,11 @@
 
 //-- Config -----------------------------------------------------------
 $push-spacing:    util-rhythm(1);
-$push-key-half:     "-_5x";  // 0.5 | half
-$push-key-one-half: "-1_5x"; // 1.5 | 1 and one half
-$push-key-double:   "-2x";
-$push-key-triple:   "-3x";
+$push-key-_25x:   	"-_25x";	// 0.25 | One quarter
+$push-key-half:     "-_half";  // 0.5 | half
+$push-key-one-half: "-1_5x";	// 1.5 | 1 and one half
+$push-key-double:   "-double";
+$push-key-triple:   "-tripe";
 
 $push-config: (
   modifiers: top bottom left right,

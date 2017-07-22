@@ -4,8 +4,7 @@ import All from './all';
 import Resume from './resume';
 
 require('../scss/app.scss');
-
-import data from '../json/data.json';
+import data from '../json/resume.json';
 
 const Console = console;
 const message = `Hi there stranger,
@@ -22,10 +21,10 @@ Console.log(message);
 
 render(
 	<All
-		desc="Currently employed at the Swedish startup"
-		title="Quixel"
-		link="//quixel.se?from=oesterkilde.dk"
-		data={data}
+		desc="Currently looking for new oppertunities"
+		title={data.work[0].company}
+		link={data.work[0].website}
+		data={data.basics.profiles}
 	/>, document.getElementById('app')
 );
 

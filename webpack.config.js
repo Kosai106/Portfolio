@@ -14,6 +14,7 @@ const PATHS = {
 module.exports = {
 	entry: {
 		src: PATHS.src,
+		vendor: ['jquery', 'moment'],
 	},
 	output: {
 		path: PATHS.build,
@@ -66,6 +67,7 @@ module.exports = {
 		new ExtractTextPlugin('[name].css'),
 		new webpack.optimize.DedupePlugin(),
 		new webpack.optimize.OccurenceOrderPlugin(),
+		new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js'),
 		new webpack.optimize.UglifyJsPlugin({ mangle: true, sourcemap: false, compress: { warnings: false } }),
 	],
 };
