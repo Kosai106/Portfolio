@@ -67,7 +67,7 @@ module.exports = {
 		new ExtractTextPlugin('[name].css'),
 		new webpack.optimize.DedupePlugin(),
 		new webpack.optimize.OccurenceOrderPlugin(),
-		new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js'),
+		new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js', Infinity),
 		new webpack.optimize.UglifyJsPlugin({ mangle: true, sourcemap: false, compress: { warnings: false } }),
 	],
 };
