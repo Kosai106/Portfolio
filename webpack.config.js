@@ -8,7 +8,7 @@ const precss = require('precss');
 
 const PATHS = {
 	src: path.join(__dirname, 'src'),
-	build: path.join(__dirname, 'build'),
+	build: path.join(__dirname, 'public'),
 };
 
 module.exports = {
