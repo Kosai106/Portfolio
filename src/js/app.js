@@ -21,7 +21,7 @@ Console.log(message);
 
 render(
 	<All
-		desc="Currently looking for new oppertunities"
+		desc="Currently looking for new opportunities"
 		title={data.work[0].company}
 		link={data.work[0].website}
 		data={data.basics.profiles}
