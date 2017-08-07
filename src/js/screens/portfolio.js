@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import Socials from '../../js/socials';
 
-import Socials from '../js/socials';
+import data from '../../json/resume.json'
 
-export default class All extends React.Component {
+export default class Portfolio extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -24,7 +26,7 @@ export default class All extends React.Component {
 
 		return (
 			<section id="main">
-				<a className="resume hidden" href="./../json/resume.json">Download resume.json</a>
+				<Link to="/resume" className="resume">Resume</Link>
 				<div className="container">
 					<div className="hero">
 						<h1 className="headline animated fadeIn">Kevin &Oslash;sterkilde</h1>
@@ -37,7 +39,7 @@ export default class All extends React.Component {
 
 							<div className="social">
 								<h3>Find my work here</h3>
-								<Socials content={this.props.data} />
+								<Socials content={this.props.data.basics.profiles} />
 							</div>
 						</div>
 					</div>
@@ -75,9 +77,16 @@ export default class All extends React.Component {
 	}
 }
 
-All.propTypes = {
+Portfolio.defaultProps = {
+	link: data.work[0].website,
+	title: data.work[0].company,
+	desc: 'Currently looking for new opportunities',
+	data: data,
+}
+
+Portfolio.propTypes = {
 	link: React.PropTypes.string.isRequired,
 	title: React.PropTypes.string.isRequired,
 	desc: React.PropTypes.string.isRequired,
-	data: React.PropTypes.array.isRequired,
+	data: React.PropTypes.object.isRequired,
 };

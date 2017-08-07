@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import moment from 'moment';
 import _ from 'lodash';
 
-require('../scss/app.scss');
-require('../scss/modules/resume.scss');
+require('../../scss/app.scss');
+require('../../scss/modules/resume.scss');
 
-import data from '../json/resume.json';
+import data from '../../json/resume.json';
 
 export default class Resume extends React.Component {
 	constructor(props) {
@@ -125,6 +126,7 @@ export default class Resume extends React.Component {
 		return (
 			<div id="resume" className="chamber-double--ends">
 				<div className="container grid">
+					<Link to='/' className="resume">Return</Link>
 					<div className="header chamber--ends">
 						<img src={data.basics.picture} alt={data.basics.name} className="avatar push--right hidden" />
 						<div className="details">
