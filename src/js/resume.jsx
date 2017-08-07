@@ -76,7 +76,7 @@ export default class Resume extends React.Component {
 			return (
 				<div key={job.company} className="chamber--bottom">
 					<span>
-						<a href={job.website} className="push--right typography--eta">{job.company}</a>
+						<a href={job.website} target="_blank" className="push--right typography--eta">{job.company}</a>
 						<span className="push--right">&middot;</span>
 						<span>{job.position}</span>
 					</span>
@@ -134,7 +134,7 @@ export default class Resume extends React.Component {
 							</div>
 							<div className="basic_details chamber-half--bottom text--center">
 								<span className="grid__item one-third">
-									<a href={data.basics.website} className="typography--eta">{data.basics.website}</a>
+									<a href={data.basics.website} target="_blank" className="typography--eta">{data.basics.website}</a>
 								</span>
 								<span className="grid__item one-third">
 									<a href={`mailto:${data.basics.email}`} className="typography--eta">{data.basics.email}</a>
