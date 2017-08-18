@@ -59,8 +59,8 @@ export default class Portfolio extends React.Component {
 									<input type="email" name="email" id="email" required />
 								</div>
 							</div>
-							<label htmlFor="message">Message</label>
 							<div className="bigBox">
+								<label htmlFor="message">Message</label>
 								<textarea name="message" id="message" rows="4" required />
 								<button type="submit" value="Send" className={toggleFormInverted}>Send message</button>
 							</div>
