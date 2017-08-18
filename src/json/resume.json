@@ -6,13 +6,15 @@
     "email": "kevin@oesterkilde.dk",
     "phone": "+45 30221564",
     "website": "http://oesterkilde.dk/",
-    "summary": "Kevin hails from the vikings in the north, specifically Denmark. He never really cared for institutional education but rather focused on self learning through books and online materials. Prior to getting his eyes opened up for web development, he was very into 3D technology and it remains a hobby to this day. He’s got unique problem solving skills and can turn coffee into code faster than you can say \"<a href=\"https://www.youtube.com/watch?v=s-mOy8VUEBk\" target=\"_blank\">Kameloso</a>\"!",
+    "summary": "Kevin hails from the vikings in the north. He never really cared for institutional education but rather focused on self learning through books and online materials. Prior to getting his eyes opened up for web development, he was interested in 3D technology and it remains a hobby to this day. He’s got unique problem solving skills and can turn coffee into code faster than you can say \"<a href=\"https://www.youtube.com/watch?v=s-mOy8VUEBk\" target=\"_blank\">Kamelåså</a>\"!<br /><br />One of his biggest weaknesses however is his curious nature and interest in learning new technologies. This on the other hand, leads to far too many unfinished side-projects.",
     "location": {
       "address": "Kildehuset 5 St. 5",
       "postalCode": "2670",
       "city": "Hundige",
       "countryCode": "DK",
-      "region": "Sjælland"
+      "region": "Sjælland",
+			"latitude": 55.601711,
+			"longitude": 12.324866
     },
     "profiles": [{
       "network": "Codepen",
@@ -35,10 +37,6 @@
       "username": "kosai106",
       "url": "https://www.artstation.com/artist/kosai106"
     }, {
-      "network": "Twitter",
-      "username": "Kosai106",
-      "url": "https://twitter.com/Kosai106"
-    }, {
       "network": "Instagram",
       "username": "kosai106",
       "url": "https://www.instagram.com/kosai106/"
@@ -50,6 +48,7 @@
       "website": "http://oesterkilde.dk/",
       "startDate": "2016-09-01",
       "endDate": "",
+      "fulltime": true,
       "summary": "As a freelancer over the past year, I've had the pleasure of working on a few projects, including a VR project backed directly by Occulus.",
       "highlights": [
         "React, React-Native, ES6 & Firebase",
@@ -64,6 +63,7 @@
       "website": "https://getlivelyapp.com/",
       "startDate": "2016-09-01",
       "endDate": "2017-07-31",
+      "fulltime": true,
       "summary": "Lively is a mobile app for discovering interesting events in your local area. I build the platform from the ground up to where it is today through multiple iterations.",
       "highlights": [
         "AWS S3, EC2, Elastic Beanstalk & PostgreSQL",
@@ -77,6 +77,7 @@
       "website": "http://quixel.se/",
       "startDate": "2016-09-01",
       "endDate": "2017-06-30",
+      "fulltime": false,
       "summary": "Quixel is a company that creates a suite of tools for game developers to help texture their artwork in the most efficient way possible.",
       "highlights": [
         "3D Modeling & Texturing",
@@ -91,6 +92,7 @@
       "website": "https://billetto.dk/",
       "startDate": "2015-11-01",
       "endDate": "2016-08-1",
+      "fulltime": true,
       "summary": "Billetto is an event-focused company where both users and organisers can easily create, manage or even find events in their local area.",
       "highlights": [
         "HTML/HAML & CSS3/SCSS",
@@ -136,8 +138,9 @@
         "HAML",
         "CSS3",
         "SCSS",
-        "Javascript",
-        "ReactJS"
+        "Javascript (ES6)",
+        "React",
+        "jQuery"
       ]
     },
     {
@@ -149,7 +152,6 @@
         "NodeJS",
         "PostgreSQL",
         "Amazon Web Services",
-        "Git",
         "Firebase"
       ]
     },
@@ -160,6 +162,18 @@
         "Adobe Photoshop",
         "Adobe Illustrator",
         "Sketch"
+      ]
+    },
+    {
+      "name": "Workflow",
+      "level": "Intermediate",
+      "keywords": [
+        "Git",
+        "SourceTree",
+        "Grunt",
+        "Webpack",
+        "HyperTerm",
+        "Abstract"
       ]
     }
   ],
@@ -181,7 +195,8 @@
       "keywords": [
         "Programming",
         "Innovative hardware",
-        "AI & machine learning"
+        "AI & machine learning",
+        "Mobile development"
       ]
     },
     {
@@ -189,8 +204,7 @@
       "keywords": [
         "Coffee",
         "Synthwave music",
-        "Art",
-        "Books"
+        "Reading"
       ]
     },
     {

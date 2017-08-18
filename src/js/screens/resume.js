@@ -18,12 +18,22 @@ export default class Resume extends React.Component {
 	render() {
 		const endDate = (x) => {
 			return (
-				_.isEmpty(x.endDate) ? 'Now' : `${moment(x.endDate, 'YYYY-MM-DD').format('MMM. YYYY')}`
+				_.isEmpty(x.endDate) ? 'Present' : `${moment(x.endDate, 'YYYY-MM-DD').format('MMM. YYYY')}`
 			);
 		};
 		const startDate = (x) => {
 			return (
 				moment(x.startDate, 'YYYY-MM-DD').format('MMM. YYYY')
+			);
+		};
+		const fulltime = (x) => {
+			return (
+				(x.fulltime === true) ? 'Full time' : 'Part time'
+			);
+		};
+		const website = (x) => {
+			return (
+				x.replace(/^https?:\/\//, 'www.').replace(/\/$/, '')
 			);
 		};
 
@@ -64,7 +74,7 @@ export default class Resume extends React.Component {
 			return (
 				<blockquote key={ref.name}>
 					<p>{ref.reference}</p>
-					<span><em>- {ref.name}</em>s</span>
+					<span className="typography--milli"><em>- {ref.name}</em>s</span>
 				</blockquote>
 			);
 		});
@@ -81,7 +91,11 @@ export default class Resume extends React.Component {
 						<span className="push--right">&middot;</span>
 						<span>{job.position}</span>
 					</span>
-					<span className="typography--milli" style={{ display: 'block' }}>{startDate(job)} - {endDate(job)}</span>
+					<span className="typography--milli" style={{ display: 'block' }}>
+						{startDate(job)} - {endDate(job)}
+						<span className="push--sides">&middot;</span>
+						{fulltime(job)}
+					</span>
 					<p>{job.summary}</p>
 					<ul>
 						{highlights}
@@ -98,8 +112,9 @@ export default class Resume extends React.Component {
 			return (
 				<div key={item.institution} className="chamber--bottom">
 					<h5>{item.institution}</h5>
-					<p>{item.area}</p>
-					<span>{startDate(item)} - {endDate(item)}</span>
+					<span>{item.area}</span>
+					<br />
+					<span className="typography--milli">{startDate(item)} - {endDate(item)}</span>
 					<ul>
 						{courses}
 					</ul>
@@ -126,7 +141,7 @@ export default class Resume extends React.Component {
 		return (
 			<div id="resume" className="chamber-double--ends">
 				<div className="container grid">
-					<Link to='/' className="resume">Return</Link>
+					<Link to="/" className="resume">Return</Link>
 					<div className="header chamber--ends">
 						<img src={data.basics.picture} alt={data.basics.name} className="avatar push--right hidden" />
 						<div className="details">
@@ -136,7 +151,7 @@ export default class Resume extends React.Component {
 							</div>
 							<div className="basic_details chamber-half--bottom text--center">
 								<span className="grid__item one-third">
-									<a href={data.basics.website} target="_blank" className="typography--eta">{data.basics.website}</a>
+									<a href={data.basics.website} target="_blank" className="typography--eta">{website(data.basics.website)}</a>
 								</span>
 								<span className="grid__item one-third">
 									<a href={`mailto:${data.basics.email}`} className="typography--eta">{data.basics.email}</a>
@@ -145,45 +160,46 @@ export default class Resume extends React.Component {
 									<a href={`tel:${data.basics.phone}`} className="typography--eta">{data.basics.phone}</a>
 								</span>
 							</div>
-							<p className="chamber-double--sides chamber-half--bottom" dangerouslySetInnerHTML={{ __html: data.basics.summary }}></p>
+							<p className="chamber-double--sides chamber-half--bottom summary" dangerouslySetInnerHTML={{ __html: data.basics.summary }}></p>
 							<hr />
 						</div>
 					</div>
 					<div className="grid__item three-fifths">
 						<h5>Experience:</h5>
 						{work}
-						<hr className="push-double--bottom" style={{ width: '100%' }} />
-						<div className="grid__item three-fifths" style={{ paddingLeft: '0' }}>
-							<h5>Languages:</h5>
-							<ul>
-								{languages}
-							</ul>
-						</div>
-						<div className="grid__item two-fifths">
+						<hr className="push-double--bottom print" style={{ width: '100%' }} />
+						<div className="grid__item two-fifths" style={{ paddingLeft: '0' }}>
 							<h5>Find me here:</h5>
 							<ul>
 								{profiles}
 							</ul>
 						</div>
-						<div className="grid__item one-whole" style={{ paddingLeft: '0' }}>
-							<h5>References:</h5>
-							{references}
+						<div className="grid__item three-fifths">
+							<h5>Languages:</h5>
+							<ul>
+								{languages}
+							</ul>
 						</div>
 					</div>
 					<div className="grid__item two-fifths">
 						<h5>Education:</h5>
 						{education}
-						<hr className="push-double--bottom" style={{ width: '100%', marginLeft: '-24px' }} />
+						<hr className="push-double--bottom print" style={{ width: '100%', marginLeft: '-24px' }} />
 						<h5>Skills:</h5>
 						{skills}
 					</div>
-					<hr className="push-double--bottom" style={{ width: 'calc(100% - (24px * 2))' }} />
+					<div className="grid__item one-whole">
+						<h5>References:</h5>
+						{references}
+					</div>
+					<hr className="push-double--bottom print" style={{ width: 'calc(100% - (24px * 2))' }} />
 					<div className="grid__item one-whole chamber--bottom">
 						<h5>Interests:</h5>
-						<ul>
+						<ul className="interests">
 							{interests}
 						</ul>
 					</div>
+					<span className="typography--micro note">This .PDF was generated using a React app written by yours truly.</span>
 				</div>
 			</div>
 		);

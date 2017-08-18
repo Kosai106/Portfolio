@@ -1,5 +1,5 @@
 @import "../vendor/csswizardry-grids";
-@import "/colors";
+@import "./colors";
 @import "../partials/all";
 
 @mixin bg-overlay($color, $overlay, $image) {
@@ -27,6 +27,16 @@ body {
 #resume {
 	a {
 		color: $global-primary;
+	}
+	.note {
+		color: $global-white;
+		height: 0;
+	}
+	.interests {
+		padding-left: 0;
+	}
+	li {
+		list-style: circle;
 	}
 	.container {
 		margin: 0 auto;
@@ -60,7 +70,30 @@ body {
 
 
 @media print {
-	a {
-		color: $global-black !important;
+	.resume, hr.print {
+		display: none;
+	}
+	.summary {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	#resume {
+		padding: 0 !important;
+	}
+	.grid {
+		width: 100% !important;
+	}
+	.note {
+		color: $global-black;
+		position: static;
+	}
+
+	//HACK Targets the 3rd "Job"
+	.grid__item.three-fifths > div:nth-child(4) {
+		padding-top: 80px;
+	}
+	//HACK Targets the 2nd "Skills"
+	.grid__item.two-fifths > div:nth-child(7) {
+		margin-top: 0px;
 	}
 }
