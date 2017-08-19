@@ -9,6 +9,7 @@
 
 $bg-img: '~/img/background-min.jpg';
 
+@media screen {
 body {
 	overflow: auto !important;
 	background-color: $global-dark-grey;
@@ -28,15 +29,26 @@ body {
 	a {
 		color: $global-primary;
 	}
-	.note {
-		color: $global-white;
-		height: 0;
-	}
 	.interests {
 		padding-left: 0;
 	}
 	li {
 		list-style: circle;
+	}
+	ul.pill-container {
+		padding-left: 16px;
+	}
+	li.pill {
+		list-style: none;
+		display: inline-block;
+		padding: 6px 12px;
+		margin: 4px;
+		background-color: $global-primary;
+		color: $global-white;
+		border-radius: 4px;
+		a {
+			color: $global-white;
+		}
 	}
 	.container {
 		margin: 0 auto;
@@ -68,8 +80,13 @@ body {
 	}
 }
 
+}
+
 
 @media print {
+	body {
+		font-size: .75em;
+	}
 	.resume, hr.print {
 		display: none;
 	}
@@ -83,17 +100,16 @@ body {
 	.grid {
 		width: 100% !important;
 	}
-	.note {
-		color: $global-black;
-		position: static;
-	}
 
 	//HACK Targets the 3rd "Job"
-	.grid__item.three-fifths > div:nth-child(4) {
-		padding-top: 80px;
-	}
+	// .grid__item.three-fifths > div:nth-child(4) {
+	// 	padding-top: 80px;
+	// }
 	//HACK Targets the 2nd "Skills"
-	.grid__item.two-fifths > div:nth-child(7) {
-		margin-top: 0px;
+	// .grid__item.two-fifths > div:nth-child(7) {
+	// 	margin-top: 0px;
+	// }
+	li {
+		list-style: circle;
 	}
 }

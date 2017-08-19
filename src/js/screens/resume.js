@@ -39,7 +39,7 @@ export default class Resume extends React.Component {
 
 		const profiles = data.basics.profiles.map((social) => {
 			return (
-				<li key={social.network}>
+				<li key={social.network} className="typography--milli pill">
 					<a target="_blank" href={social.url}>
 						{social.network}
 					</a>
@@ -57,13 +57,13 @@ export default class Resume extends React.Component {
 
 		const interests = data.interests.map((hobby) => {
 			const keywords = hobby.keywords.map((key) => {
-				return <li key={key}>{key}</li>;
+				return <li key={key} className="typography--milli pill">{key}</li>;
 			});
 
 			return (
 				<div key={hobby.name} className="grid__item one-third">
 					<b>{hobby.name}</b>
-					<ul>
+					<ul className="pill-container">
 						{keywords}
 					</ul>
 				</div>
@@ -74,14 +74,14 @@ export default class Resume extends React.Component {
 			return (
 				<blockquote key={ref.name}>
 					<p>{ref.reference}</p>
-					<span className="typography--milli"><em>- {ref.name}</em>s</span>
+					<span className="typography--milli"><em>- {ref.name}</em></span>
 				</blockquote>
 			);
 		});
 
 		const work = data.work.map((job) => {
 			const highlights = job.highlights.map((highlight) => {
-				return <li key={highlight}>{highlight}</li>;
+				return <li key={highlight} className="typography--milli">{highlight}</li>;
 			});
 
 			return (
@@ -106,7 +106,7 @@ export default class Resume extends React.Component {
 
 		const education = data.education.map((item) => {
 			const courses = item.courses.map((course) => {
-				return <li key={course}>{course}</li>;
+				return <li key={course} className="typography--milli">{course}</li>;
 			});
 
 			return (
@@ -124,14 +124,14 @@ export default class Resume extends React.Component {
 
 		const skills = data.skills.map((skill) => {
 			const keywords = skill.keywords.map((key) => {
-				return <li key={key}>{key}</li>;
+				return <li key={key} className="typography--milli pill">{key}</li>;
 			});
 
 			return (
 				<div key={skill.name} className="chamber--bottom">
 					<h5>{skill.name}</h5>
 					<span>{skill.level}</span>
-					<ul>
+					<ul className="pill-container">
 						{keywords}
 					</ul>
 				</div>
@@ -141,7 +141,7 @@ export default class Resume extends React.Component {
 		return (
 			<div id="resume" className="chamber-double--ends">
 				<div className="container grid">
-					<Link to="/" className="resume">Return</Link>
+					<Link to="/" className="resume">Home</Link>
 					<div className="header chamber--ends">
 						<img src={data.basics.picture} alt={data.basics.name} className="avatar push--right hidden" />
 						<div className="details">
@@ -167,10 +167,9 @@ export default class Resume extends React.Component {
 					<div className="grid__item three-fifths">
 						<h5>Experience:</h5>
 						{work}
-						<hr className="push-double--bottom print" style={{ width: '100%' }} />
 						<div className="grid__item two-fifths" style={{ paddingLeft: '0' }}>
 							<h5>Find me here:</h5>
-							<ul>
+							<ul className="pill-container">
 								{profiles}
 							</ul>
 						</div>
@@ -184,7 +183,6 @@ export default class Resume extends React.Component {
 					<div className="grid__item two-fifths">
 						<h5>Education:</h5>
 						{education}
-						<hr className="push-double--bottom print" style={{ width: '100%', marginLeft: '-24px' }} />
 						<h5>Skills:</h5>
 						{skills}
 					</div>
@@ -192,14 +190,12 @@ export default class Resume extends React.Component {
 						<h5>References:</h5>
 						{references}
 					</div>
-					<hr className="push-double--bottom print" style={{ width: 'calc(100% - (24px * 2))' }} />
 					<div className="grid__item one-whole chamber--bottom">
 						<h5>Interests:</h5>
 						<ul className="interests">
 							{interests}
 						</ul>
 					</div>
-					<span className="typography--micro note">This .PDF was generated using a React app written by yours truly.</span>
 				</div>
 			</div>
 		);
