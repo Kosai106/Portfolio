@@ -52,11 +52,11 @@
       "website": "http://oesterkilde.dk/",
       "startDate": "2016-09-01",
       "fulltime": true,
-      "summary": "As a freelancer over the past year, I've had the pleasure of working on a few projects, including a VR project backed directly by Occulus.",
+      "summary": "As a freelancer over the past year, I've had the pleasure of working on a few projects, including a VR project backed directly by Oculus.",
       "highlights": [
         "React, React-Native, ES6 & Firebase",
         "SEO, Web optimisation & Logo design",
-        "UI/UX consulting & design",
+        "UI/UX consulting & Design",
 				"Shader & tools pipeline creation"
       ]
     },
@@ -98,7 +98,7 @@
       "fulltime": true,
       "summary": "Billetto is an event-focused company where both users and organisers can easily create, manage or even find events in their local area.",
       "highlights": [
-        "HTML/HAML & CSS3/SCSS",
+        "HTML5/HAML & CSS3/SCSS",
         "Javascript, ES6 & Grunt",
         "Ruby on Rails, Webpack & React",
         "Google Analytics, Tag Manager & Firebase"
@@ -143,6 +143,37 @@
         "Intro to C# programming",
         "Intro to 3D development"
       ]
+    }
+  ],
+  "courses": [
+    {
+      "title": "Learn Node - Master Package",
+      "teacher": "Wes Bos",
+      "company": "Bostype Inc"
+    },
+    {
+      "title": "Learn Redux",
+      "teacher": "Wes Bos",
+      "company": "Bostype Inc"
+    },
+    {
+      "title": "Build Material Design Apps with React-Native",
+      "teacher": "Linton Ye",
+      "company": "Lynda"
+    },
+    {
+      "title": "Professional Rails Code Along",
+      "teacher": "Jordan Hudgens",
+      "company": "Stackskills"
+    },
+    {
+      "title": "Create a Cohesive Icon Set",
+      "teacher": "Adam Whitcroft",
+      "company": "Bostype Inc"
+    },
+    {
+      "title": "Learn Python",
+      "company": "Codecademy"
     }
   ],
 	"awards": [
@@ -201,7 +232,9 @@
         "Sketch",
         "Craft",
         "3D Studio Max",
-        "Quixel Suite"
+        "Quixel Suite",
+        "Substance Designer",
+        "World Machine"
       ]
     },
     {
@@ -275,7 +308,7 @@
     {
       "name": "Event discovery app",
       "entity": "Lively.",
-      "type": "Application",
+      "type": "Mobile Application",
       "description": "Lively is a mobile app for discovering interesting events in your local area.",
       "startDate": "2016-09-01",
       "endDate": "2017-07-31",
@@ -296,6 +329,30 @@
       "roles": [
         "Lead Developer",
         "Designer"
+      ]
+    },
+    {
+      "name": "Trainer dashboard front-end",
+      "entity": "FrontEnd · A ReactJS Exercise",
+      "type": "Web Application",
+      "description": "A mockup was provided to me as part of a job interview, and I had 12 hours to create a functional prototype based on that.",
+      "startDate": "2016-06-27",
+      "endDate": "2017-12-22",
+      "url": "https://github.com/Kosai106/FrontEnd",
+      "highlights": [
+        "Developing a functional front-end prototype under a strict deadline.",
+        "Matching the application to the provided mockup.",
+        "Adding dynamic filters ontop of the view."
+      ],
+      "keywords": [
+        "React",
+        "Javascript",
+        "Webpack",
+        "JSON",
+        "Lodash"
+      ],
+      "roles": [
+        "Developer"
       ]
     }
   ],
