@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Socials from '../../js/socials';
 
-import data from '../../json/resume.json'
+import data from '../../json/resume.json';
 
 export default class Portfolio extends React.Component {
 	constructor(props) {
@@ -80,9 +80,9 @@ export default class Portfolio extends React.Component {
 Portfolio.defaultProps = {
 	link: data.work[0].website,
 	title: data.work[0].company,
-	desc: 'Currently looking for new opportunities',
-	data: data,
-}
+	desc: 'Currently working at the Danish startup',
+	data,
+};
 
 Portfolio.propTypes = {
 	link: React.PropTypes.string.isRequired,

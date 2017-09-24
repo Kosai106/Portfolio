@@ -56,18 +56,23 @@
       "company": "Applaus ApS",
       "position": "Software Developer",
       "website": "http://applaus.io/",
+      "business": "web",
       "startDate": "2017-09-18",
+      "endDate": null,
       "fulltime": true,
-      "summary": "",
+      "summary": "At Applaus I'm responsible for getting our application ready for launch as soon as possible, both for mobile and the web.",
       "highlights": [
-        "React, React-Native & ES6"
+        "React, React-Native & ES6",
+        "REST, MongoDB & Redux"
       ]
     },
     {
       "company": "Freelance",
       "position": "Designer & Developer",
       "website": "http://oesterkilde.dk/",
+      "business": "web",
       "startDate": "2016-09-01",
+      "endDate": null,
       "fulltime": false,
       "summary": "As a freelancer over the past year, I've had the pleasure of working on a few projects, including a VR project backed directly by Oculus.",
       "highlights": [
@@ -81,6 +86,7 @@
       "company": "Lively. Media",
       "position": "Lead Developer",
       "website": "https://getlivelyapp.com/",
+      "business": "web",
       "startDate": "2016-09-01",
       "endDate": "2017-07-31",
       "fulltime": true,
@@ -96,6 +102,7 @@
       "company": "Quixel AB",
       "position": "Community Staff",
       "website": "http://quixel.se/",
+      "business": "game",
       "startDate": "2016-09-01",
       "endDate": "2017-06-30",
       "fulltime": false,
@@ -110,6 +117,7 @@
       "company": "Billetto ApS",
       "position": "Front-End Developer",
       "website": "https://billetto.dk/",
+      "business": "web",
       "startDate": "2015-11-01",
       "endDate": "2016-08-01",
       "fulltime": true,
@@ -125,6 +133,7 @@
       "company": "Craneballs Studio LLC",
       "position": "3D Artist",
       "website": "https://www.craneballs.com/",
+      "business": "game",
       "startDate": "2012-07-01",
       "endDate": "2015-02-28",
       "fulltime": false,
@@ -140,10 +149,10 @@
     {
       "institution": "University of Reading",
       "area": "Information Technology",
-      "studyType": "",
+      "studyType": null,
       "startDate": "2014-02-24",
       "endDate": "2014-04-13",
-      "gpa": "",
+      "gpa": null,
       "courses": [
         "Mobile Games Programming"
       ]
@@ -151,10 +160,10 @@
     {
       "institution": "Roskilde Tekniske Skole",
       "area": "Information Technology",
-      "studyType": "",
+      "studyType": null,
       "startDate": "2007-01-01",
       "endDate": "2008-01-01",
-      "gpa": "4.0",
+      "gpa": null,
       "courses": [
         "Intro to web development",
         "Intro to C# programming",
@@ -383,6 +392,6 @@
   "meta": {
     "canonical": "https://github.com/Kosai106/portfolio/blob/master/src/json/resume.json",
     "version": "v1.0.0",
-    "lastModified": "2017-09-20T19:21:00"
+    "lastModified": "2017-09-24T19:10:00"
   }
 }

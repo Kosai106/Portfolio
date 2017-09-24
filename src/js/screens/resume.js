@@ -79,7 +79,7 @@ export default class Resume extends React.Component {
 			);
 		});
 
-		const work = data.work.map((job) => {
+		const work = data.work.filter((job) => job.business === 'web').map((job) => {
 			const highlights = job.highlights.map((highlight) => {
 				return <li key={highlight} className="typography--milli">{highlight}</li>;
 			});
@@ -90,6 +90,8 @@ export default class Resume extends React.Component {
 						<a href={job.website} target="_blank" className="push--right typography--eta">{job.company}</a>
 						<span className="push--right">&middot;</span>
 						<span>{job.position}</span>
+						<span className="push--right">&middot;</span>
+						<span>{job.business}</span>
 					</span>
 					<span className="typography--milli" style={{ display: 'block' }}>
 						{startDate(job)} - {endDate(job)}
@@ -103,6 +105,8 @@ export default class Resume extends React.Component {
 				</div>
 			);
 		});
+
+		console.log(work);
 
 		const education = data.education.map((item) => {
 			const courses = item.courses.map((course) => {
