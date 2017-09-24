@@ -106,8 +106,6 @@ export default class Resume extends React.Component {
 			);
 		});
 
-		console.log(work);
-
 		const education = data.education.map((item) => {
 			const courses = item.courses.map((course) => {
 				return <li key={course} className="typography--milli">{course}</li>;
