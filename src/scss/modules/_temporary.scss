@@ -81,6 +81,7 @@ $bg-img: '~/img/background-min.jpg';
             align-items: center;
             @include hover-shadow;
             transition: all .2s ease-in-out 0s;
+            margin-bottom: 14px;
             &:hover {
               background: $global-primary;
               color: $global-white;
@@ -222,6 +223,7 @@ svg[role="img"] {
 
 @media (max-width: 600px) {
 	.resume {
+    display: none;
 		right: 50%;
 		transform: translateX(50%);
 	}

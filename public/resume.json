@@ -2,7 +2,7 @@
   "basics": {
     "name": "Kevin Østerkilde",
     "label": "Designer & Developer",
-    "picture": "http://oesterkilde.dk/img/avatars/Kevin.png",
+    "picture": "https://oesterkilde.dk/img/avatars/Kevin.jpg",
     "email": "kevin@oesterkilde.dk",
     "phone": "+45 30221564",
     "website": "http://oesterkilde.dk/",
@@ -392,6 +392,6 @@
   "meta": {
     "canonical": "https://github.com/Kosai106/portfolio/blob/master/src/json/resume.json",
     "version": "v1.0.0",
-    "lastModified": "2017-09-24T19:10:00"
+    "lastModified": "2017-09-24T20:27:00"
   }
 }
