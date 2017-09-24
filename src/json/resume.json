@@ -15,7 +15,7 @@
       "region": "Sjælland",
       "coords": [
         55.601711,
-  			12.324866
+        12.324866
       ]
     },
     "profiles": [
@@ -23,41 +23,58 @@
         "network": "Codepen",
         "username": "Kosai106",
         "url": "https://codepen.io/Kosai106/pens/public/"
-      }, {
+      },
+      {
         "network": "Github",
         "username": "Kosai106",
         "url": "https://github.com/Kosai106"
-      }, {
+      },
+      {
         "network": "Dribbble",
         "username": "Kosai106",
         "url": "https://dribbble.com/Kosai106"
-      }, {
+      },
+      {
         "network": "Linkedin",
         "username": "kosai106",
         "url": "https://linkedin.com/in/kosai106"
-      }, {
+      },
+      {
         "network": "Artstation",
         "username": "kosai106",
         "url": "https://www.artstation.com/artist/kosai106"
-      }, {
+      },
+      {
         "network": "Instagram",
         "username": "kosai106",
         "url": "https://www.instagram.com/kosai106/"
       }
     ]
   },
-  "work": [{
+  "work": [
+    {
+      "company": "Applaus ApS",
+      "position": "Software Developer",
+      "website": "http://applaus.io/",
+      "startDate": "2017-09-18",
+      "fulltime": true,
+      "summary": "",
+      "highlights": [
+        "React, React-Native & ES6"
+      ]
+    },
+    {
       "company": "Freelance",
       "position": "Designer & Developer",
       "website": "http://oesterkilde.dk/",
       "startDate": "2016-09-01",
-      "fulltime": true,
+      "fulltime": false,
       "summary": "As a freelancer over the past year, I've had the pleasure of working on a few projects, including a VR project backed directly by Oculus.",
       "highlights": [
         "React, React-Native, ES6 & Firebase",
         "SEO, Web optimisation & Logo design",
         "UI/UX consulting & Design",
-				"Shader & tools pipeline creation"
+        "Shader & tools pipeline creation"
       ]
     },
     {
@@ -67,11 +84,12 @@
       "startDate": "2016-09-01",
       "endDate": "2017-07-31",
       "fulltime": true,
-      "summary": "Lively is a mobile app for discovering interesting events in your local area. I build the platform from the ground up to where it is today through multiple iterations.",
+      "summary": "At Lively I was the lead developer of a team of 5, developing an event-based multi-platform application. After a year of development the initial version of the app was launched.<br /><br />As lead, I was responsible for prioritising tasks, ensuring our developers understood the tasks assigned to them and didn’t get stuck on a problem for too long. Besides managing, I also stood for the majority of the actual development process itself, as well as designing the visual identity of the brand.<br /><br />The biggest challenge I faced was definitely taking prototype code and making it production-ready, something which caused many headaches. In hindsight it should have been realised that a prototype is just that - A prototype.",
       "highlights": [
-        "AWS S3, EC2, Elastic Beanstalk & PostgreSQL",
-        "React-Native, ES6, HAML & Ruby on Rails",
-        "Automation tasks & UX design"
+        "Managed a small team of developers.",
+        "Build and prototyped a feature-rich/interactive cross-platform application.",
+        "Developed the brand and visual identity of the platform.",
+        "Successfully launched on Google Play store."
       ]
     },
     {
@@ -81,12 +99,11 @@
       "startDate": "2016-09-01",
       "endDate": "2017-06-30",
       "fulltime": false,
-      "summary": "Quixel is a company that creates a suite of tools for game developers to help texture their artwork in the most efficient way possible.",
+      "summary": "At Quixel I was a part of the community staff team, mainly dealing with live customer support and being responsible for anything regarding VRay integration.<br /><br />The “live” part of live support was very important, and users were to expect a reply within a short period of time. That was the main goal of our operation. Besides support, I also helped out with my prior knowledge of having used VRay to ensure the exported shaders from our suite of tools were as accurate as possible.",
       "highlights": [
-        "3D Modeling & Texturing",
-        "VRay pipeline improvements",
-        "Customer support",
-        "General administrative tasks"
+        "Fast and responsive customer support.",
+        "VRay pipeline improvements and optimisations.",
+        "General administrative tasks."
       ]
     },
     {
@@ -96,25 +113,25 @@
       "startDate": "2015-11-01",
       "endDate": "2016-08-01",
       "fulltime": true,
-      "summary": "Billetto is an event-focused company where both users and organisers can easily create, manage or even find events in their local area.",
+      "summary": "At Billetto I was the sole developer in my team, thus being responsible for the vast majority of the development needs.<br /><br />My team being growth hacking, it was very organic traffic oriented and because of this I had to build, prototype and A/B test several landing page designs. On top of this I also launched a brand new organiser onboarding experience that would streamline the process of creating an event.<br /><br />Besides just landing pages, I also overhauled the design of our Zendesk supportcenter to be more in line with the recently updated brand, as well as created smaller widgets such as a pricing module and a quick event creator.",
       "highlights": [
-        "HTML5/HAML & CSS3/SCSS",
-        "Javascript, ES6 & Grunt",
-        "Ruby on Rails, Webpack & React",
-        "Google Analytics, Tag Manager & Firebase"
+        "Build, prototyped and A/B tested multiple landing pages.",
+        "Launched a new guided organiser onboarding flow.",
+        "Overhauled Zendesk supportcenter visual look.",
+        "Helped content creators with optimising their workflows."
       ]
     },
-		{
+    {
       "company": "Craneballs Studio LLC",
       "position": "3D Artist",
       "website": "https://www.craneballs.com/",
       "startDate": "2012-07-01",
       "endDate": "2015-02-28",
       "fulltime": false,
-      "summary": "Craneballs is a mobile games studio, focusing on their leading first-person shooter title, Overkill.",
+      "summary": "At Craneballs I was a part of a core team of artists in charge of developing all the assets for the series of 3D mobile games, Overkill and Gun Master.<br /><br />My responsibilities was to develop high fidelity, mobile optimised  weapon assets to ensure smooth performance on various types of phones, yet be modular enough to allow for the very flexible attachment system to do it’s thing. On top of this, the UV’s of each mesh also had to be planned out properly so as much space as possible could be reused to lower memory consumption.",
       "highlights": [
-        "Modular low-poly modeling",
-        "Efficient UV layouts"
+        "Modeling highly detailed, modular meshes.",
+        "Sticking to strict poly-counts to ensure steady performance."
       ]
     }
   ],
@@ -176,22 +193,23 @@
       "company": "Codecademy"
     }
   ],
-	"awards": [
+  "awards": [
     {
       "title": "Person of the Year",
       "date": "2006-01-01",
       "awarder": "Time Magazine",
       "summary": "There is no spoon."
     },
-		{
-			"title": "Special Thanks",
-			"date": "2015-03-01",
-			"awarder": "Rubycone",
-			"summary": "Credited on the indie horror game, Hektor."
-		}
+    {
+      "title": "Special Thanks",
+      "date": "2015-03-01",
+      "awarder": "Rubycone",
+      "summary": "Credited on the indie horror game, Hektor."
+    }
   ],
   "publications": [],
-  "skills": [{
+  "skills": [
+    {
       "name": "Front-End Development",
       "level": "Advanced",
       "keywords": [
@@ -251,7 +269,8 @@
       ]
     }
   ],
-  "languages": [{
+  "languages": [
+    {
       "language": "Danish",
       "fluency": "Native speaker"
     },
@@ -264,7 +283,8 @@
       "fluency": "Beginner"
     }
   ],
-  "interests": [{
+  "interests": [
+    {
       "name": "Tech",
       "keywords": [
         "Programming",
@@ -302,6 +322,10 @@
     {
       "name": "Richard Palmer",
       "reference": "Kevin provides quality work every time - he makes changes when asked, with a good understanding of what you want straight away.  Great colleague, highly recommended!"
+    },
+    {
+      "name": "Andy Pottage",
+      "reference": "Having worked alongside Kev on a handful of projects and prototypes, he's shown initiative and drive to keep the projects moving in the right direction. He always had the project's best interests in mind and his creative flair and knowledge of various technologies means he's always a pleasure to work with."
     }
   ],
   "projects": [
@@ -359,6 +383,6 @@
   "meta": {
     "canonical": "https://github.com/Kosai106/portfolio/blob/master/src/json/resume.json",
     "version": "v1.0.0",
-    "lastModified": "2017-08-19T19:59:00"
+    "lastModified": "2017-09-20T19:21:00"
   }
 }

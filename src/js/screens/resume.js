@@ -96,7 +96,7 @@ export default class Resume extends React.Component {
 						<span className="push--sides">&middot;</span>
 						{fulltime(job)}
 					</span>
-					<p>{job.summary}</p>
+					<p dangerouslySetInnerHTML={{ __html: job.summary }}></p>
 					<ul>
 						{highlights}
 					</ul>
