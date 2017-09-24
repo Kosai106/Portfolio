@@ -61,13 +61,16 @@ module.exports = {
 		}),
 		new ExtractTextPlugin('[name].css'),
 	] : [
-		new NpmInstallPlugin({
-			dev: true, // --save-dev
-		}),
-		new ExtractTextPlugin('[name].css'),
-		new webpack.optimize.DedupePlugin(),
-		new webpack.optimize.OccurenceOrderPlugin(),
-		new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js', Infinity),
-		new webpack.optimize.UglifyJsPlugin({ mangle: true, sourcemap: false, compress: { warnings: false } }),
-	],
+			new NpmInstallPlugin({
+				dev: true, // --save-dev
+			}),
+			new webpack.DefinePlugin({
+				'process.env': { NODE_ENV: JSON.stringify('production') },
+			}),
+			new ExtractTextPlugin('[name].css'),
+			new webpack.optimize.DedupePlugin(),
+			new webpack.optimize.OccurenceOrderPlugin(),
+			new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js', Infinity),
+			new webpack.optimize.UglifyJsPlugin({ mangle: true, sourcemap: false, compress: { warnings: false } }),
+		],
 };
