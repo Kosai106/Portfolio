@@ -7,3 +7,4 @@ jspm_packages
 .npm
 .svgsus
 build/*
+public

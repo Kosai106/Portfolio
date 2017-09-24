@@ -5,6 +5,7 @@ const NpmInstallPlugin = require('npm-install-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const precss = require('precss');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const PATHS = {
 	src: path.join(__dirname, 'src'),
@@ -67,6 +68,12 @@ module.exports = {
 			new webpack.DefinePlugin({
 				'process.env': { NODE_ENV: JSON.stringify('production') },
 			}),
+			new CopyWebpackPlugin([
+				{ from: 'src/img', to: 'img' },
+				{ from: 'src/index.html', to: 'index.html' },
+				{ from: 'src/json/resume.json', to: 'resume.json' },
+				{ from: 'src/meta' },
+			]),
 			new ExtractTextPlugin('[name].css'),
 			new webpack.optimize.DedupePlugin(),
 			new webpack.optimize.OccurenceOrderPlugin(),
