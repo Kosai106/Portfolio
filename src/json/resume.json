@@ -242,9 +242,9 @@
         "Ruby on Rails",
         "NodeJS",
         "REST",
+        "Firebase",
         "PostgreSQL",
         "Amazon Web Services",
-        "Firebase",
         "C#",
         "Python"
       ]
@@ -253,11 +253,11 @@
       "name": "Design",
       "level": "Advanced",
       "keywords": [
+        "Sketch",
+        "Craft",
         "Adobe Photoshop",
         "Adobe Illustrator",
         "Adobe InDesign",
-        "Sketch",
-        "Craft",
         "3D Studio Max",
         "Quixel Suite",
         "Substance Designer",
@@ -271,6 +271,7 @@
         "Git",
         "SourceTree",
         "Atom",
+        "Visual Studio Code",
         "Grunt",
         "Webpack",
         "HyperTerm",
@@ -298,9 +299,10 @@
       "keywords": [
         "Programming",
         "Hardware",
-        "AI",
+        "A.I.",
         "Machine learning",
-        "Mobile development"
+        "Mobile development",
+        "Hackathons"
       ]
     },
     {
@@ -392,6 +394,6 @@
   "meta": {
     "canonical": "https://github.com/Kosai106/portfolio/blob/master/src/json/resume.json",
     "version": "v1.0.0",
-    "lastModified": "2017-09-24T20:27:00"
+    "lastModified": "2017-09-24T20:43:00"
   }
 }
