@@ -28,7 +28,7 @@ export default class Resume extends React.Component {
 		};
 		const fulltime = (x) => {
 			return (
-				(x.fulltime === true) ? 'Full time' : 'Part time'
+				(x.fulltime === true || null) ? 'Full time' : 'Part time'
 			);
 		};
 		const website = (x) => {
