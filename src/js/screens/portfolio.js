@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { Link } from 'react-router-dom';
-import Socials from '../../js/socials';
+//import Socials from '../../js/socials';
+import Socials from '../components/molecules/socials';
 
 import data from '../../json/resume.json';
 
@@ -39,7 +40,7 @@ export default class Portfolio extends React.Component {
 
 							<div className="social">
 								<h3>Find my work here</h3>
-								<Socials content={this.props.data.basics.profiles} />
+								<Socials data={this.props.data.basics.profiles} />
 							</div>
 						</div>
 					</div>
@@ -85,8 +86,8 @@ Portfolio.defaultProps = {
 };
 
 Portfolio.propTypes = {
-	link: React.PropTypes.string.isRequired,
-	title: React.PropTypes.string.isRequired,
-	desc: React.PropTypes.string.isRequired,
-	data: React.PropTypes.object.isRequired,
+	link: PropTypes.string.isRequired,
+	title: PropTypes.string.isRequired,
+	desc: PropTypes.string.isRequired,
+	data: PropTypes.object.isRequired,
 };

@@ -53,17 +53,16 @@
   },
   "work": [
     {
-      "company": "Applaus ApS",
-      "position": "Front-End Developer",
-      "website": "http://applaus.io/",
+      "company": "Evendo ApS",
+      "position": "App Developer",
+      "website": "https://evendo.com/",
       "business": "web",
-      "startDate": "2017-09-18",
+      "startDate": "2017-10-02",
       "endDate": null,
       "fulltime": true,
-      "summary": "At Applaus I'm responsible for getting our application ready for launch as soon as possible, both for mobile and the web.",
+      "summary": "At Evendo I'm responsible for building completely new native applications for both iOS and Android.",
       "highlights": [
-        "Building advanced components in React-Native.",
-        "Integrating said components using a REST API and Redux."
+        "Close collaboration with the design team to ensure a smooth experience."
       ]
     },
     {
@@ -74,16 +73,17 @@
       "startDate": "2016-09-01",
       "endDate": null,
       "fulltime": false,
-      "summary": "As a freelancer over the past year, I've had the pleasure of working on a few projects, including a VR project backed directly by Oculus.",
+      "summary": "As a freelancer over the past year, I've had the pleasure of working on a few projects, including a VR project backed directly by Oculus. On top of this, I also helped a small startup getting their app ready for launch on iOS and Android.",
       "highlights": [
-        "React, React-Native, ES6 & Firebase",
+        "Clients: Applaus ApS, MoonMill Studios ApS, Dezimal CPH ApS & 1937 Aps",
+        "React, React-Native, Redux & Firebase",
         "SEO, Web optimisation & Logo design",
         "UI/UX consulting & Design",
         "Shader & tools pipeline creation"
       ]
     },
     {
-      "company": "Lively. Media",
+      "company": "Lively. Media IVS",
       "position": "Lead Developer",
       "website": "https://getlivelyapp.com/",
       "business": "web",
@@ -295,11 +295,10 @@
   ],
   "interests": [
     {
-      "name": "Tech",
+      "name": "Technology",
       "keywords": [
         "Programming",
         "Hardware",
-        "A.I.",
         "Machine learning",
         "Mobile development",
         "Hackathons"
@@ -319,7 +318,7 @@
       ]
     },
     {
-      "name": "Video Games",
+      "name": "Games",
       "keywords": [
         "Playing",
         "Creating",

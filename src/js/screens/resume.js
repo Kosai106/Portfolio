@@ -3,6 +3,17 @@ import { Link } from 'react-router-dom';
 import moment from 'moment';
 import _ from 'lodash';
 
+// Atoms
+import Header5 from '../components/atoms/headers/Header5';
+
+// Molecules
+import Skills from '../components/molecules/skills';
+import Interests from '../components/molecules/interests';
+import Profiles from '../components/molecules/profiles';
+
+// Organisms
+import Section from '../components/organisms/section';
+
 require('../../scss/app.scss');
 require('../../scss/modules/resume.scss');
 
@@ -37,36 +48,11 @@ export default class Resume extends React.Component {
 			);
 		};
 
-		const profiles = data.basics.profiles.map((social) => {
-			return (
-				<li key={social.network} className="typography--milli pill">
-					<a target="_blank" href={social.url}>
-						{social.network}
-					</a>
-				</li>
-			);
-		});
-
 		const languages = data.languages.map((lang) => {
 			return (
 				<li key={lang.language}>
 					<b>{lang.language}</b> &middot; {lang.fluency}
 				</li>
-			);
-		});
-
-		const interests = data.interests.map((hobby) => {
-			const keywords = hobby.keywords.map((key) => {
-				return <li key={key} className="typography--milli pill">{key}</li>;
-			});
-
-			return (
-				<div key={hobby.name} className="grid__item one-third">
-					<b>{hobby.name}</b>
-					<ul className="pill-container">
-						{keywords}
-					</ul>
-				</div>
 			);
 		});
 
@@ -79,7 +65,7 @@ export default class Resume extends React.Component {
 			);
 		});
 
-		const work = data.work.filter((job) => job.business === 'web').map((job) => {
+		const work = data.work.filter((job) => job.business !== 'game' || null || undefined).map((job) => {
 			const highlights = job.highlights.map((highlight) => {
 				return <li key={highlight} className="typography--milli">{highlight}</li>;
 			});
@@ -90,8 +76,6 @@ export default class Resume extends React.Component {
 						<a href={job.website} target="_blank" className="push--right typography--eta">{job.company}</a>
 						<span className="push--right">&middot;</span>
 						<span>{job.position}</span>
-						<span className="push--right">&middot;</span>
-						<span>{job.business}</span>
 					</span>
 					<span className="typography--milli" style={{ display: 'block' }}>
 						{startDate(job)} - {endDate(job)}
@@ -124,22 +108,6 @@ export default class Resume extends React.Component {
 			);
 		});
 
-		const skills = data.skills.map((skill) => {
-			const keywords = skill.keywords.map((key) => {
-				return <li key={key} className="typography--milli pill">{key}</li>;
-			});
-
-			return (
-				<div key={skill.name} className="chamber--bottom">
-					<h5>{skill.name}</h5>
-					<span>{skill.level}</span>
-					<ul className="pill-container">
-						{keywords}
-					</ul>
-				</div>
-			);
-		});
-
 		return (
 			<div id="resume" className="chamber-double--ends">
 				<div className="container grid">
@@ -166,38 +134,30 @@ export default class Resume extends React.Component {
 							<hr />
 						</div>
 					</div>
-					<div className="grid__item three-fifths">
-						<h5>Experience:</h5>
+					<div className="grid__item seven-twelfths">
+						<Header5 title={'Experience'} />
 						{work}
-						<div className="grid__item two-fifths" style={{ paddingLeft: '0' }}>
-							<h5>Find me here:</h5>
-							<ul className="pill-container">
-								{profiles}
-							</ul>
-						</div>
-						<div className="grid__item three-fifths">
-							<h5>Languages:</h5>
-							<ul>
-								{languages}
-							</ul>
-						</div>
 					</div>
-					<div className="grid__item two-fifths">
-						<h5>Education:</h5>
+					<div className="grid__item five-twelfths">
+						<Header5 title={'Education'} />
 						{education}
-						<h5>Skills:</h5>
-						{skills}
+						<Header5 title={'Skills'} />
+						<Skills data={data.skills} />
 					</div>
-					<div className="grid__item one-whole">
-						<h5>References:</h5>
-						{references}
-					</div>
-					<div className="grid__item one-whole chamber--bottom">
-						<h5>Interests:</h5>
-						<ul className="interests">
-							{interests}
+					<Section title={'Find me here'} size={4}>
+						<Profiles data={data.basics.profiles} isLink />
+					</Section>
+					<Section title={'Languages'} size={8}>
+						<ul>
+							{languages}
 						</ul>
-					</div>
+					</Section>
+					<Section title={'References'}>
+						{references}
+					</Section>
+					<Section title={'Interests'}>
+						<Interests data={data.interests} />
+					</Section>
 				</div>
 			</div>
 		);
