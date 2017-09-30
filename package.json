@@ -7,7 +7,7 @@
     "dev": "./node_modules/.bin/webpack-dev-server -d --progress --content-base src --inline --hot --host 0.0.0.0",
     "build": "rm -rf ./public && NODE_ENV=production webpack --progress -p",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "firebase deploy && firebase database:set / ./public/resume.json -y"
+    "deploy": "firebase deploy && firebase database:set /resume ./public/resume.json -y"
   },
   "author": "Kevin Østerkilde <kevin@oesterkilde.dk> (http://oesterkilde.dk/)",
   "license": "ISC",
@@ -16,6 +16,7 @@
     "url": "https://github.com/Kosai106/Portfolio.git"
   },
   "dependencies": {
+    "firebase": "^4.3.0",
     "jquery": "^3.1.0",
     "json": "^9.0.4",
     "json-loader": "^0.5.4",
