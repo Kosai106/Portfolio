@@ -10,77 +10,87 @@
 $bg-img: '~/img/background-min.jpg';
 
 @media screen {
-body {
-	overflow: auto !important;
-	background-color: $global-dark-grey;
-  @include bg-overlay($global-dark-grey, .75, $bg-img);
-}
+	body {
+		overflow: auto !important;
+		background-color: $global-dark-grey;
+		@include bg-overlay($global-dark-grey, .75, $bg-img);
+	}
 
-.hr--right {
-	border-right: 1px solid $global-dark-grey;
-	margin: 0 14px;
-}
+	.hr--right {
+		border-right: 1px solid $global-dark-grey;
+		margin: 0 14px;
+	}
 
-.muted {
-	color: rgba($global-dark-grey, .75);
-}
+	.muted {
+		color: rgba($global-dark-grey, .75);
+	}
 
-#resume {
-	a {
-		color: $global-primary;
-	}
-	.interests {
-		padding-left: 0;
-	}
-	li {
-		list-style: circle;
-	}
-	ul.pill-container {
-		padding-left: 16px;
-	}
-	li.pill {
-		list-style: none;
-		display: inline-block;
-		padding: 6px 12px;
-		margin: 4px;
-		background-color: $global-primary;
-		color: $global-white;
-		border-radius: 4px;
-		font-weight: bolder;
+	#resume {
 		a {
+			color: $global-primary;
+		}
+		.interests {
+			padding-left: 0;
+		}
+		li {
+			list-style: circle;
+		}
+		ul.pill-container {
+			padding-left: 16px;
+		}
+		li.pill {
+			list-style: none;
+			display: inline-block;
+			padding: 6px 12px;
+			margin: 4px;
+			background-color: $global-primary;
 			color: $global-white;
+			border-radius: 4px;
+			font-weight: bolder;
+			a {
+				color: $global-white;
+			}
 		}
-	}
-	.container {
-		margin: 0 auto;
-		background-color: $global-white;
-		border-radius: 2px;
-	}
-	.header {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		padding-left: 24px;
-		padding-right: 24px;
-		.avatar {
-			border-radius: 10px;
-			width: 150px;
-			height: 150px;
+		.container {
+			margin: 0 auto;
+			background-color: $global-white;
+			border-radius: 2px;
 		}
-		.details {
-			flex-direction: column;
-			.title {
-				display: flex;
+		.header {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			padding-left: 24px;
+			padding-right: 24px;
+			.avatar {
+				border-radius: 10px;
+				width: 150px;
+				height: 150px;
+			}
+			.details {
 				flex-direction: column;
-				align-items: center;
-				.typography--kilo {
-					font-weight: 600;
+				.title {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					.typography--kilo {
+						font-weight: 600;
+					}
 				}
 			}
 		}
 	}
 }
 
+.loading {
+	display: flex;
+	min-height: 100vh;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	h1 {
+		color: $global-white;
+	}
 }
 
 

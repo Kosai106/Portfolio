@@ -1,6 +1,5 @@
 import React, { PropTypes } from 'react';
 import { Link } from 'react-router-dom';
-//import Socials from '../../js/socials';
 import Socials from '../components/molecules/socials';
 
 import data from '../../json/resume.json';
