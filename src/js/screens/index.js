@@ -5,12 +5,12 @@ import Portfolio from './portfolio';
 import Resume from './resume';
 
 const Main = () => (
-  <main>
-    <Switch>
-      <Route exact path='/' component={Portfolio} />
-      <Route path='/resume' component={Resume} />
-    </Switch>
-  </main>
+	<main>
+		<Switch>
+			<Route exact path="/" component={Portfolio} />
+			<Route path="/resume" component={Resume} />
+		</Switch>
+	</main>
 );
 
 export default Main;

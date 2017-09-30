@@ -1,7 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import moment from 'moment';
-import _ from 'lodash';
 import firebase from '../utilities/config/firebase';
 
 // Atoms
@@ -20,12 +18,11 @@ import Work from '../components/molecules/work';
 import Section from '../components/organisms/section';
 import Header from '../components/organisms/header';
 
+// Stylesheets
 require('../../scss/app.scss');
 require('../../scss/modules/resume.scss');
 
-// import data from '../../json/resume.json';
-
-export default class Resume extends React.Component {
+class Resume extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -88,3 +85,5 @@ export default class Resume extends React.Component {
 		);
 	}
 }
+
+export default Resume;

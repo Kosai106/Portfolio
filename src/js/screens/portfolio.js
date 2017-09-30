@@ -1,10 +1,10 @@
-import React, { PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router-dom';
 import Socials from '../components/molecules/socials';
 
 import data from '../../json/resume.json';
 
-export default class Portfolio extends React.Component {
+class Portfolio extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -90,3 +90,5 @@ Portfolio.propTypes = {
 	desc: PropTypes.string.isRequired,
 	data: PropTypes.object.isRequired,
 };
+
+export default Portfolio;
