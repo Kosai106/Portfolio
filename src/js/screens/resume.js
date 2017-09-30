@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import firebase from '../utilities/config/firebase';
+import dataJSON from '../../json/resume.json';
 
 // Atoms
 import Header5 from '../components/atoms/headers/Header5';
@@ -32,11 +33,17 @@ class Resume extends Component {
 	}
 
 	componentWillMount() {
-		firebase.database().ref('/resume').once('value', (snapshot) => {
+		if (process.env.NODE_ENV === 'production') {
+			firebase.database().ref('/resume').once('value', (snapshot) => {
+				const dbData = [];
+				dbData.push(snapshot.val());
+				this.setState({ data: dbData, isReady: true });
+			});
+		} else {
 			const dbData = [];
-			dbData.push(snapshot.val());
+			dbData.push(dataJSON);
 			this.setState({ data: dbData, isReady: true });
-		});
+		}
 	}
 
 	render() {

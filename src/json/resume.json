@@ -73,13 +73,12 @@
       "startDate": "2016-09-01",
       "endDate": null,
       "fulltime": false,
-      "summary": "As a freelancer over the past year, I've had the pleasure of working on a few projects, including a VR project backed directly by Oculus. On top of this, I also helped a small startup getting their app ready for launch on iOS and Android.",
+      "summary": "As a freelancer over the past year, I've had the pleasure of working on a few projects, including a VR project backed directly by Oculus. On top of this, I also helped a small startup getting their app ready for launch on iOS and Android.<br /><br />Clients include:<br />Applaus ApS, MoonMill Studios ApS, 1937 ApS & Dezimal CPH ApS.",
       "highlights": [
-        "Clients: Applaus ApS, MoonMill Studios ApS, Dezimal CPH ApS & 1937 Aps",
-        "React, React-Native, Redux & Firebase",
-        "SEO, Web optimisation & Logo design",
-        "UI/UX consulting & Design",
-        "Shader & tools pipeline creation"
+        "React, React-Native, Redux & Firebase.",
+        "SEO, web optimisation & logo design.",
+        "UI/UX consulting & design.",
+        "Shader & tools pipeline creation."
       ]
     },
     {
@@ -391,8 +390,8 @@
     }
   ],
   "meta": {
-    "canonical": "https://github.com/Kosai106/portfolio/blob/master/src/json/resume.json",
-    "version": "v1.0.0",
-    "lastModified": "2017-09-24T20:43:00"
+    "canonical": "https://oesterkilde.dk/resume.json",
+    "version": "v1.0.5",
+    "lastModified": "2017-09-30T11:02:00"
   }
 }
