@@ -2,7 +2,6 @@ import React from 'react';
 import { render } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import App from './js/screens/index';
-import Resume from './js/screens/resume';
 
 require('./scss/app.scss');
 
@@ -16,7 +15,7 @@ Console.log('\n\n');
 
 render(
 	<BrowserRouter>
-		<Resume />
+		<App />
 	</BrowserRouter>,
 	document.getElementById('app')
 );
