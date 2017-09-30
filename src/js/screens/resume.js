@@ -51,8 +51,9 @@ class Resume extends Component {
 		return (
 			<div>
 				{
-					isReady ? (
-						<div id="resume" className="chamber-double--ends">
+					isReady
+						?
+						(<div id="resume" className="chamber-double--ends">
 							<div className="container grid">
 								<Link to="/" className="resume">Home</Link>
 								<Header data={data[0].basics} />
@@ -81,12 +82,14 @@ class Resume extends Component {
 									<Interests data={data[0].interests} />
 								</Section>
 							</div>
-						</div>
-					) : (
+						</div>)
+						:
+						(<div>
+							<Link to="/" className="resume">Home</Link>
 							<div className="loading">
 								<h1>Loading...</h1>
 							</div>
-						)
+						</div>)
 				}
 			</div>
 		);
