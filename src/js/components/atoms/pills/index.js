@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const Pill = ({ data }) => {
 	return <li className="typography--milli pill">{data}</li>;

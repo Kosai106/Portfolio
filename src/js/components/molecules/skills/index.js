@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import PillContainer from '../../atoms/pills/pillContainer';
 import Header5 from '../../atoms/headers/Header5';
 

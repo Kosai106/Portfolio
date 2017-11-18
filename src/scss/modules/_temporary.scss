@@ -135,24 +135,31 @@ $bg-img: '~/img/background-min.jpg';
     .bigBox {
       display: flex;
       flex-direction: column;
-      @include hover-shadow;
-      button {
-				border: none;
-        background: $global-primary;
-        border-top: 1px solid $global-primary;
-				color: $global-white;
-        padding: 14px;
-        box-shadow: none;
-        border-radius: 0 0 2px 2px;
-        cursor: pointer;
-        transition: all .2s ease-in-out 0s;
-        &:hover {
-          background: $global-white;
-          border-top: 1px solid $global-lightest-grey;
-          color: $global-primary;
+      .message-container {
+        display: flex;
+        flex-direction: column;
+        @include hover-shadow;
+        textarea {
+          box-shadow: none;
         }
-        &:active, &:focus {
-          outline: none;
+        button {
+          border: none;
+          background: $global-primary;
+          border-top: 1px solid $global-primary;
+          color: $global-white;
+          padding: 14px;
+          box-shadow: none;
+          border-radius: 0 0 2px 2px;
+          cursor: pointer;
+          transition: all .2s ease-in-out 0s;
+          &:hover {
+            background: $global-white;
+            border-top: 1px solid $global-lightest-grey;
+            color: $global-primary;
+          }
+          &:active, &:focus {
+            outline: none;
+          }
         }
       }
     }

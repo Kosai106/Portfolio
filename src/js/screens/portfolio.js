@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import Socials from '../components/molecules/socials';
 
@@ -19,10 +20,13 @@ class Portfolio extends Component {
 		e.preventDefault();
 	}
 	render() {
-		const openClass = this.state.open ? 'form_opened' : 'form_closed';
-		const toggleForm = this.state.open ? 'visible' : 'ghost';
-		const toggleFormInverted = this.state.open ? 'ghost' : 'visible';
-		const ButtonMessage = this.state.open ? 'Cancel' : 'Contact me';
+		const { desc, link, title } = this.props;
+		const { open } = this.state;
+
+		const openClass = open ? 'form_opened' : 'form_closed';
+		const toggleForm = open ? 'visible' : 'ghost';
+		const toggleFormInverted = open ? 'ghost' : 'visible';
+		const ButtonMessage = open ? 'Cancel' : 'Contact me';
 
 		return (
 			<section id="main">
@@ -34,12 +38,12 @@ class Portfolio extends Component {
 
 						<hr className="seperator" />
 						<div className={toggleFormInverted}>
-							<p>{this.props.desc}, <a href={this.props.link} target="_blank">{this.props.title}</a></p>
+							<p>{desc}, <a href={link} target="_blank">{title}</a></p>
 							<hr className="seperator" />
 
 							<div className="social">
 								<h3>Find my work here</h3>
-								<Socials data={this.props.data.basics.profiles} />
+								<Socials data={data.basics.profiles} />
 							</div>
 						</div>
 					</div>
@@ -61,8 +65,10 @@ class Portfolio extends Component {
 							</div>
 							<div className="bigBox">
 								<label htmlFor="message">Message</label>
-								<textarea name="message" id="message" rows="4" required />
-								<button type="submit" value="Send" className={toggleFormInverted}>Send message</button>
+								<div className="message-container">
+									<textarea name="message" id="message" rows="4" required />
+									<button type="submit" value="Send" className={toggleFormInverted}>Send message</button>
+								</div>
 							</div>
 						</div>
 						<div className="row">
