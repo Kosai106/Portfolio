@@ -15,7 +15,7 @@ const PATHS = {
 module.exports = {
 	entry: {
 		src: PATHS.src,
-		vendor: ['jquery', 'moment'],
+		vendor: ['moment'],
 	},
 	output: {
 		path: PATHS.build,
