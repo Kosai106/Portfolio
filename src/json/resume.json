@@ -22,43 +22,43 @@
       {
         "network": "Codepen",
         "username": "Kosai106",
-        "url": "https://codepen.io/Kosai106/pens/public/"
+        "url": "https://codepen.io/"
       },
       {
         "network": "Github",
         "username": "Kosai106",
-        "url": "https://github.com/Kosai106"
+        "url": "https://github.com/"
       },
       {
         "network": "Dribbble",
         "username": "Kosai106",
-        "url": "https://dribbble.com/Kosai106"
+        "url": "https://dribbble.com/"
       },
       {
         "network": "Linkedin",
         "username": "kosai106",
-        "url": "https://linkedin.com/in/kosai106"
+        "url": "https://linkedin.com/in/"
       },
       {
         "network": "Artstation",
         "username": "kosai106",
-        "url": "https://www.artstation.com/artist/kosai106"
+        "url": "https://www.artstation.com/artist/"
       },
       {
         "network": "Instagram",
         "username": "kosai106",
-        "url": "https://www.instagram.com/kosai106/"
+        "url": "https://www.instagram.com/"
       }
     ]
   },
   "work": [
     {
       "company": "Evendo ApS",
-      "position": "App Developer",
+      "position": "React-Native Developer",
       "website": "https://evendo.com/",
       "business": "web",
       "startDate": "2017-10-02",
-      "endDate": null,
+      "endDate": "2017-12-18",
       "fulltime": true,
       "summary": "At Evendo I'm responsible for building completely new native applications for both iOS and Android.",
       "highlights": [
@@ -195,25 +195,21 @@
     {
       "title": "Create a Cohesive Icon Set",
       "teacher": "Adam Whitcroft",
-      "company": "Bostype Inc"
-    },
-    {
-      "title": "Learn Python",
-      "company": "Codecademy"
+      "company": "Skillshare"
     }
   ],
   "awards": [
-    {
-      "title": "Person of the Year",
-      "date": "2006-01-01",
-      "awarder": "Time Magazine",
-      "summary": "There is no spoon."
-    },
     {
       "title": "Special Thanks",
       "date": "2015-03-01",
       "awarder": "Rubycone",
       "summary": "Credited on the indie horror game, Hektor."
+    },
+    {
+      "title": "Person of the Year",
+      "date": "2006-01-01",
+      "awarder": "Time Magazine",
+      "summary": "There is no spoon."
     }
   ],
   "publications": [],
@@ -336,6 +332,10 @@
     {
       "name": "Andy Pottage",
       "reference": "Having worked alongside Kev on a handful of projects and prototypes, he's shown initiative and drive to keep the projects moving in the right direction. He always had the project's best interests in mind and his creative flair and knowledge of various technologies means he's always a pleasure to work with."
+    },
+    {
+      "name": "Inês D. Soares",
+      "reference": "Kevin is highly skilled and has a great eye for detail. Always delivers excellence work and has a brilliant attitude working under pressure. It has been always a pleasure working with Kevin and I have no reservations in recommending him for future positions."
     }
   ],
   "projects": [
@@ -369,7 +369,7 @@
       "name": "Trainer dashboard front-end",
       "entity": "FrontEnd · A ReactJS Exercise",
       "type": "Web Application",
-      "description": "A mockup was provided to me as part of a job interview, and I had 12 hours to create a functional prototype based on that.",
+      "description": "A mockup was provided to me as part of a job interview, and I had 12 hours to create a functional prototype based on that, however I've since updated it a bit just for fun.",
       "startDate": "2016-06-27",
       "endDate": "2017-12-22",
       "url": "https://github.com/Kosai106/FrontEnd",
@@ -392,7 +392,7 @@
   ],
   "meta": {
     "canonical": "https://oesterkilde.dk/resume.json",
-    "version": "v1.0.6",
-    "lastModified": "2017-11-18T23:33:00"
+    "version": "v1.0.7",
+    "lastModified": "2018-01-14T10:29:00"
   }
 }

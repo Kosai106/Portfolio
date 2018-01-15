@@ -5,7 +5,7 @@ const SocialIcon = ({ data }) => {
 	const name = data.network.toLowerCase();
 	return (
 		<li key={data.network}>
-			<a className="animated icon" target="_blank" href={data.url}>
+			<a className="animated icon" target="_blank" href={`${data.url}${data.username}`}>
 				<svg role="img" className="fa" viewBox="0 0 100 100">
 					<use xlinkHref={`img/socials/${name}-logo.svg#${data.network}`} />
 				</svg>
