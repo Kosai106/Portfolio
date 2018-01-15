@@ -23,41 +23,36 @@ module.exports = {
 	},
 	devtool: debug ? 'inline-sourcemap' : null,
 	resolve: {
-		extensions: ['', '.js', '.jsx'],
+		extensions: ['.js', '.jsx', '.ts', '.scss', '.json'],
 	},
 	devServer: {
 		historyApiFallback: true,
 	},
 	module: {
-		eslint: {
-			configFile: 'path/.eslintrc',
-		},
-		loaders: [
+		rules: [
 			{
 				test: /\.jsx?$/,
-				exclude: /(node_modules|bower_components)/,
-				loaders: [
+				exclude: /node_modules/,
+				use: [
 					'babel-loader?presets[]=es2015,presets[]=stage-0,presets[]=react,plugins[]=react-html-attrs,plugins[]=transform-class-properties,plugins[]=transform-decorators-legacy',
 				],
 			},
 			{
 				test: /\.json$/,
-				loader: 'json',
+				use: 'json-loader',
 			},
 			{
 				test: /\.(css|scss|sass)$/,
-				loader: ExtractTextPlugin.extract(
-					'style', 'css!postcss!sass'
-				),
+				use: ExtractTextPlugin.extract({
+					fallback: 'style-loader',
+					use: ['css-loader', 'postcss-loader', 'sass-loader'],
+				}),
 			},
 			{
 				test: /\.svg/,
-				loader: 'svg-url-loader',
+				use: 'svg-url-loader',
 			},
 		],
-	},
-	postcss: function Prefixer() {
-		return [precss, autoprefixer];
 	},
 	plugins: debug ? [
 		new NpmInstallPlugin({
@@ -68,22 +63,22 @@ module.exports = {
 		}),
 		new ExtractTextPlugin('[name].css'),
 	] : [
-			new NpmInstallPlugin({
-				dev: true, // --save-dev
-			}),
-			new webpack.DefinePlugin({
-				'process.env': { NODE_ENV: JSON.stringify('production') },
-			}),
-			new CopyWebpackPlugin([
-				{ from: 'src/img', to: 'img' },
-				{ from: 'src/index.html', to: 'index.html' },
-				{ from: 'src/json/resume.json', to: 'resume.json' },
-				{ from: 'src/meta' },
-			]),
-			new ExtractTextPlugin('[name].css'),
-			new webpack.optimize.DedupePlugin(),
-			new webpack.optimize.OccurenceOrderPlugin(),
-			new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js', Infinity),
-			new webpack.optimize.UglifyJsPlugin({ mangle: true, sourcemap: false, compress: { warnings: false } }),
-		],
+		new NpmInstallPlugin({
+			dev: true, // --save-dev
+		}),
+		new webpack.DefinePlugin({
+			'process.env': { NODE_ENV: JSON.stringify('production') },
+		}),
+		new CopyWebpackPlugin([
+			{ from: 'src/img', to: 'img' },
+			{ from: 'src/index.html', to: 'index.html' },
+			{ from: 'src/json/resume.json', to: 'resume.json' },
+			{ from: 'src/meta' },
+		]),
+		new ExtractTextPlugin('[name].css'),
+		new webpack.optimize.DedupePlugin(),
+		new webpack.optimize.OccurenceOrderPlugin(),
+		new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js', Infinity),
+		new webpack.optimize.UglifyJsPlugin({ mangle: true, sourcemap: false, compress: { warnings: false } }),
+	],
 };
