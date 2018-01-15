@@ -8,3 +8,4 @@ jspm_packages
 .svgsus
 build/*
 public
+yarn.lock

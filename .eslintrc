@@ -1,23 +1,23 @@
 {
   "extends": "airbnb",
   "plugins": [
-    "react",
+    "react"
   ],
   "settings": {
     "react": {
       "pragma": "React",
-      "version": "15.0",
-    },
+      "version": "15.0"
+    }
   },
   "env" : {
     "browser" : true,
     "node" : true,
     "es6" : true,
     "commonjs": true,
-    "amd" : true,
+    "amd" : true
   },
   "globals": {
-    "React": true,
+    "React": true
   },
   "rules" : {
     "arrow-body-style": [0],
@@ -29,7 +29,7 @@
     "react/jsx-uses-vars": "error",
     "react/jsx-indent-props": [2, "tab"],
     "react/jsx-indent": [2, "tab"],
-    "react/no-multi-comp": [0],
+    "react/no-multi-comp": [0]
   },
   "parserOptions": {
     "sourceType": "module",
@@ -38,7 +38,7 @@
       "modules": true,
       "spread" : true,
       "restParams" : true,
-      "jsx" : true,
+      "jsx" : true
     }
   }
 }

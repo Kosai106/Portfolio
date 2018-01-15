@@ -8,7 +8,9 @@
     "build": "rm -rf ./public && NODE_ENV=production webpack --progress -p",
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "firebase deploy && firebase database:set /resume ./public/resume.json -y",
-    "deploy:resume": "firebase database:set /resume ./public/resume.json -y"
+    "deploy:resume": "firebase database:set /resume ./public/resume.json -y",
+    "clean": "rm -rf ./public && rm -rf ./node_modules",
+    "clean:build": "rm -rf ./public"
   },
   "author": "Kevin Østerkilde <kevin@oesterkilde.dk> (http://oesterkilde.dk/)",
   "license": "ISC",
