@@ -21,7 +21,7 @@ module.exports = {
 		path: PATHS.build,
 		filename: '[name].js',
 	},
-	devtool: debug ? 'inline-sourcemap' : null,
+	devtool: debug ? 'inline-sourcemap' : false,
 	resolve: {
 		extensions: ['.js', '.jsx', '.ts', '.scss', '.json'],
 	},
@@ -70,15 +70,15 @@ module.exports = {
 			'process.env': { NODE_ENV: JSON.stringify('production') },
 		}),
 		new CopyWebpackPlugin([
-			{ from: 'src/img', to: 'img' },
+			{ from: 'src/img', to: 'img', ignore: ['*.psd'] },
 			{ from: 'src/index.html', to: 'index.html' },
 			{ from: 'src/json/resume.json', to: 'resume.json' },
 			{ from: 'src/meta' },
 		]),
 		new ExtractTextPlugin('[name].css'),
 		new webpack.optimize.DedupePlugin(),
-		new webpack.optimize.OccurenceOrderPlugin(),
-		new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js', Infinity),
+		new webpack.optimize.OccurrenceOrderPlugin(),
+		new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.js' }),
 		new webpack.optimize.UglifyJsPlugin({ mangle: true, sourcemap: false, compress: { warnings: false } }),
 	],
 };
