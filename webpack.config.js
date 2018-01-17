@@ -75,7 +75,7 @@ module.exports = {
 			{ from: 'src/json/resume.json', to: 'resume.json' },
 			{ from: 'src/meta' },
 		], {
-			ignore: ['src/img/*.psd'],
+			ignore: ['*.psd'],
 			copyUnmodified: true,
 		}),
 		new ExtractTextPlugin('[name].css'),
