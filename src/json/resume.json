@@ -36,7 +36,7 @@
       },
       {
         "network": "Linkedin",
-        "username": "kosai106",
+        "username": "oesterkilde",
         "url": "https://linkedin.com/in/"
       },
       {
@@ -392,7 +392,7 @@
   ],
   "meta": {
     "canonical": "https://oesterkilde.dk/resume.json",
-    "version": "v1.0.7",
-    "lastModified": "2018-01-14T10:29:00"
+    "version": "v1.0.8",
+    "lastModified": "2018-01-17T14:04:00"
   }
 }
