@@ -70,11 +70,14 @@ module.exports = {
 			'process.env': { NODE_ENV: JSON.stringify('production') },
 		}),
 		new CopyWebpackPlugin([
-			{ from: 'src/img', to: 'img', ignore: ['*.psd'] },
+			{ from: 'src/img', to: 'img' },
 			{ from: 'src/index.html', to: 'index.html' },
 			{ from: 'src/json/resume.json', to: 'resume.json' },
 			{ from: 'src/meta' },
-		]),
+		], {
+			ignore: ['src/img/*.psd'],
+			copyUnmodified: true,
+		}),
 		new ExtractTextPlugin('[name].css'),
 		new webpack.optimize.DedupePlugin(),
 		new webpack.optimize.OccurrenceOrderPlugin(),
