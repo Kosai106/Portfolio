@@ -1,95 +1,41 @@
-const path = require('path');
+const debug = process.env.NODE_ENV !== 'production';
 const webpack = require('webpack');
+const path = require('path');
+const NpmInstallPlugin = require('npm-install-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
+const precss = require('precss');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-const ENV = process.env.NODE_ENV || 'development';
-const babelrc = require('./babel');
-
 const PATHS = {
-	src: path.resolve('./src'),
-	public: path.resolve('./public'),
+	src: path.join(__dirname, 'src'),
+	build: path.join(__dirname, 'public'),
 };
 
-const plugins = [
-	new webpack.DefinePlugin({
-		'process.env.NODE_ENV': JSON.stringify(ENV),
-	}),
-	new ExtractTextPlugin({
-		filename: '[name].css',
-		allChunks: false,
-		disable: ENV !== 'production',
-	}),
-];
-
-const prodPlugins = [
-	...plugins,
-	new CopyWebpackPlugin([
-		{ from: 'img', to: 'img' },
-		{ from: 'index.html' },
-		{ from: 'json/resume.json' },
-		{ from: 'meta' },
-	], {
-		ignore: ['*.psd'],
-		copyUnmodified: true,
-	}),
-	new webpack.optimize.CommonsChunkPlugin({
-		name: 'vendor',
-		minChunks: Infinity,
-	}),
-	new webpack.optimize.UglifyJsPlugin({
-		output: { comments: false },
-		mangle: true,
-		sourcemap: true,
-		compress: {
-			properties: true,
-			keep_fargs: false,
-			pure_getters: true,
-			collapse_vars: true,
-			warnings: false,
-			screw_ie8: true,
-			sequences: true,
-			dead_code: true,
-			drop_debugger: true,
-			comparisons: true,
-			conditionals: true,
-			evaluate: true,
-			booleans: true,
-			loops: true,
-			unused: true,
-			hoist_funs: true,
-			if_return: true,
-			join_vars: true,
-			cascade: true,
-			drop_console: false,
-		},
-	}),
-];
-
 module.exports = {
-	context: PATHS.src,
 	entry: {
-		src: './index.js',
-		vendor: ['react', 'moment', 'lodash', 'firebase'],
+		src: PATHS.src,
+		vendor: ['moment'],
 	},
 	output: {
-		path: PATHS.public,
+		path: PATHS.build,
 		filename: '[name].js',
 	},
+	devtool: debug ? 'inline-sourcemap' : false,
 	resolve: {
 		extensions: ['.js', '.jsx', '.ts', '.scss', '.json'],
-		modules: [path.resolve('node_modules'), 'node_modules'],
+	},
+	devServer: {
+		historyApiFallback: true,
 	},
 	module: {
 		rules: [
 			{
 				test: /\.jsx?$/,
 				exclude: /node_modules/,
-				use: {
-					loader: 'babel-loader',
-					options: babelrc(ENV),
-				},
+				use: [
+					'babel-loader?presets[]=es2015,presets[]=stage-0,presets[]=react,plugins[]=react-html-attrs,plugins[]=transform-class-properties,plugins[]=transform-decorators-legacy',
+				],
 			},
 			{
 				test: /\.json$/,
@@ -99,31 +45,7 @@ module.exports = {
 				test: /\.(css|scss|sass)$/,
 				use: ExtractTextPlugin.extract({
 					fallback: 'style-loader',
-					use: [
-						{
-							loader: 'css-loader',
-							options: {
-								sourceMap: true,
-								modules: false,
-								importLoaders: true,
-							},
-						},
-						{
-							loader: 'postcss-loader',
-							options: {
-								sourceMap: 'inline',
-								plugins: () => {
-									return [autoprefixer({ browsers: ['> 1%', 'IE >= 10'] })];
-								},
-							},
-						},
-						{
-							loader: 'sass-loader',
-							options: {
-								sourceMap: true,
-							},
-						},
-					],
+					use: ['css-loader', 'postcss-loader', 'sass-loader'],
 				}),
 			},
 			{
@@ -132,11 +54,34 @@ module.exports = {
 			},
 		],
 	},
-	plugins: ENV === 'production' ? prodPlugins : plugins,
-	devtool: ENV === 'production' ? 'source-map' : 'eval',
-	devServer: {
-		port: 3000,
-		host: 'localhost',
-		historyApiFallback: true,
-	},
+	plugins: debug ? [
+		new NpmInstallPlugin({
+			save: true, // --save
+		}),
+		new webpack.DefinePlugin({
+			'process.env': { NODE_ENV: JSON.stringify('development') },
+		}),
+		new ExtractTextPlugin('[name].css'),
+	] : [
+		new NpmInstallPlugin({
+			dev: true, // --save-dev
+		}),
+		new webpack.DefinePlugin({
+			'process.env': { NODE_ENV: JSON.stringify('production') },
+		}),
+		new CopyWebpackPlugin([
+			{ from: 'src/img', to: 'img' },
+			{ from: 'src/index.html', to: 'index.html' },
+			{ from: 'src/json/resume.json', to: 'resume.json' },
+			{ from: 'src/meta' },
+		], {
+			ignore: ['*.psd'],
+			copyUnmodified: true,
+		}),
+		new ExtractTextPlugin('[name].css'),
+		new webpack.optimize.DedupePlugin(),
+		new webpack.optimize.OccurrenceOrderPlugin(),
+		new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.js' }),
+		new webpack.optimize.UglifyJsPlugin({ mangle: true, sourcemap: false, compress: { warnings: false } }),
+	],
 };
