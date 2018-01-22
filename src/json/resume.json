@@ -53,20 +53,6 @@
   },
   "work": [
     {
-      "company": "Evendo ApS",
-      "position": "React-Native Developer",
-      "website": "https://evendo.com/",
-      "business": "web",
-      "startDate": "2017-10-02",
-      "endDate": "2017-12-18",
-      "fulltime": true,
-      "summary": "At Evendo I'm responsible for building completely new native applications for both iOS and Android.",
-      "highlights": [
-        "Close collaboration with the design team to ensure a smooth experience.",
-        "Building mobile solutions that meet the needs of our customers both B2C and B2B."
-      ]
-    },
-    {
       "company": "Freelance",
       "position": "Designer & Developer",
       "website": "http://oesterkilde.dk/",
@@ -80,6 +66,20 @@
         "SEO, web optimisation & logo design.",
         "UI/UX consulting & design.",
         "Shader & tools pipeline creation."
+      ]
+    },
+    {
+      "company": "Evendo ApS",
+      "position": "React-Native Developer",
+      "website": "https://evendo.com/",
+      "business": "web",
+      "startDate": "2017-10-02",
+      "endDate": "2017-12-18",
+      "fulltime": true,
+      "summary": "At Evendo I'm responsible for building completely new native applications for both iOS and Android.",
+      "highlights": [
+        "Close collaboration with the design team to ensure a smooth experience.",
+        "Building mobile solutions that meet the needs of our customers both B2C and B2B."
       ]
     },
     {

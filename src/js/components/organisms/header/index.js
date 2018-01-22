@@ -7,7 +7,8 @@ function website(x) {
 	);
 }
 
-const Header = ({ data, children }) => {
+const Header = (props) => {
+	const { data, children } = props
 	return (
 		<div className="header chamber--ends">
 			<img src={data.picture} alt={data.name} className="avatar push--right hidden" />
@@ -34,7 +35,7 @@ const Header = ({ data, children }) => {
 	);
 };
 
-Header.prototype = {
+Header.protoTypes = {
 	data: PropTypes.array.isRequired,
 	children: PropTypes.children,
 };

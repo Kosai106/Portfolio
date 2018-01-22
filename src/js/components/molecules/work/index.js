@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import _ from 'lodash';
@@ -19,11 +19,11 @@ function fulltime(x) {
 	);
 }
 
-const Work = ({ data }) => {
+const Work = (props) => {
 	return (
-		<div>
+		<Fragment>
 			{
-				data.filter((job) => job.business !== 'game' || null || undefined).map((job, i) => {
+				props.data.filter((job) => job.business !== 'game' || null || undefined).map((job, i) => {
 					const highlights = job.highlights.map((highlight, x) => {
 						return <li key={x} className="typography--milli">{highlight}</li>;
 					});
@@ -48,11 +48,11 @@ const Work = ({ data }) => {
 					);
 				})
 			}
-		</div>
+		</Fragment>
 	);
 };
 
-Work.prototype = {
+Work.protoTypes = {
 	data: PropTypes.array.isRequired,
 };
 

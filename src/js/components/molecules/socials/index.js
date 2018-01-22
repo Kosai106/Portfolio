@@ -2,17 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import SocialIcon from '../../atoms/icons/SocialIcon';
 
-const Socials = ({ data }) => {
+const Socials = (props) => {
 	return (
 		<ul>
 			{
-				data.map((item, i) => <SocialIcon key={i} data={item} />)
+				props.data.map((item, i) => <SocialIcon key={i} data={item} />)
 			}
 		</ul>
 	);
 };
 
-Socials.prototype = {
+Socials.protoTypes = {
 	data: PropTypes.array.isRequired,
 };
 

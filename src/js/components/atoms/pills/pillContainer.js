@@ -2,17 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Pill from './index';
 
-const PillContainer = ({ data }) => {
+const PillContainer = (props) => {
 	return (
 		<ul className="pill-container">
 			{
-				data.map((item, i) => <Pill key={i} data={item} />)
+				props.data.map((item, i) => <Pill key={i} data={item} />)
 			}
 		</ul>
 	);
 };
 
-PillContainer.prototype = {
+PillContainer.protoTypes = {
 	data: PropTypes.object.isRequired,
 };
 

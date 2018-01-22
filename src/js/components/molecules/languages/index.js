@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Languages = ({ data }) => {
+const Languages = (props) => {
 	return (
 		<ul>
 			{
-				data.map((lang, i) => (
+				props.data.map((lang, i) => (
 					<li key={i}>
 						<b>{lang.language}</b> &middot; {lang.fluency}
 					</li>
@@ -15,7 +15,7 @@ const Languages = ({ data }) => {
 	);
 };
 
-Languages.prototype = {
+Languages.protoTypes = {
 	data: PropTypes.array.isRequired,
 };
 

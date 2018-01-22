@@ -86,7 +86,8 @@ class Portfolio extends Component {
 Portfolio.defaultProps = {
 	link: data.work[0].website,
 	title: data.work[0].company,
-	desc: 'Currently working at the Danish startup',
+	// desc: 'Currently working at the Danish startup',
+	desc: 'Currently working as',
 	data,
 };
 

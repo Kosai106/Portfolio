@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import _ from 'lodash';
@@ -14,11 +14,11 @@ function endDate(x) {
 	);
 }
 
-const Education = ({ data }) => {
+const Education = (props) => {
 	return (
-		<div>
+		<Fragment>
 			{
-				data.map((item, i) => {
+				props.data.map((item, i) => {
 					const courses = item.courses.map((course, x) => {
 						return <li key={x} className="typography--milli">{course}</li>;
 					});
@@ -36,11 +36,11 @@ const Education = ({ data }) => {
 					);
 				})
 			}
-		</div>
+		</Fragment>
 	);
 };
 
-Education.prototype = {
+Education.propTypes = {
 	data: PropTypes.array.isRequired,
 };
 

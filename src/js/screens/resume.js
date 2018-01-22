@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import firebase from '../utilities/config/firebase';
 import dataJSON from '../../json/resume.json';
@@ -7,13 +7,7 @@ import dataJSON from '../../json/resume.json';
 import Header5 from '../components/atoms/headers/Header5';
 
 // Molecules
-import Skills from '../components/molecules/skills';
-import Interests from '../components/molecules/interests';
-import Profiles from '../components/molecules/profiles';
-import Languages from '../components/molecules/languages';
-import References from '../components/molecules/references';
-import Education from '../components/molecules/education';
-import Work from '../components/molecules/work';
+import { Skills, Interests, Profiles, Languages, References, Education, Work } from '../components/molecules';
 
 // Organisms
 import Section from '../components/organisms/section';
@@ -24,13 +18,10 @@ require('../../scss/app.scss');
 require('../../scss/modules/resume.scss');
 
 class Resume extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			isReady: false,
-			data: [],
-		};
-	}
+	state = {
+		isReady: false,
+		data: [],
+	};
 
 	componentWillMount() {
 		if (process.env.NODE_ENV === 'production') {
@@ -49,7 +40,7 @@ class Resume extends Component {
 	render() {
 		const { data, isReady } = this.state;
 		return (
-			<div>
+			<Fragment>
 				{
 					isReady
 						?
@@ -84,14 +75,14 @@ class Resume extends Component {
 							</div>
 						</div>)
 						:
-						(<div>
+						(<Fragment>
 							<Link to="/" className="resume">Home</Link>
 							<div className="loading">
 								<h1>Loading...</h1>
 							</div>
-						</div>)
+						</Fragment>)
 				}
-			</div>
+			</Fragment>
 		);
 	}
 }

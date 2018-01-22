@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import PillContainer from '../../atoms/pills/pillContainer';
 
-const Interests = ({ data }) => {
+const Interests = (props) => {
 	return (
 		<ul className="interests">
 			{
-				data.map((hobby, i) => {
+				props.data.map((hobby, i) => {
 					return (
 						<div key={i} className="grid__item one-third">
 							<b>{hobby.name}</b>
@@ -19,7 +19,7 @@ const Interests = ({ data }) => {
 	);
 };
 
-Interests.prototype = {
+Interests.protoTypes = {
 	data: PropTypes.object.isRequired,
 };
 

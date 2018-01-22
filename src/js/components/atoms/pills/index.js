@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Pill = ({ data }) => {
-	return <li className="typography--milli pill">{data}</li>;
+const Pill = (props) => {
+	return <li className="typography--milli pill">{props.data}</li>;
 };
 
-Pill.prototype = {
+Pill.protoTypes = {
 	data: PropTypes.object.isRequired,
 };
 

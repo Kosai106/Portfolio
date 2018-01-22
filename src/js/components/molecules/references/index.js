@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
-const References = ({ data }) => {
+const References = (props) => {
 	return (
-		<div>
+		<Fragment>
 			{
-				data.map((ref, i) => {
+				props.data.map((ref, i) => {
 					return (
 						<blockquote key={i}>
 							<p>{ref.reference}</p>
@@ -14,11 +14,11 @@ const References = ({ data }) => {
 					);
 				})
 			}
-		</div>
+		</Fragment>
 	);
 };
 
-References.prototype = {
+References.protoTypes = {
 	data: PropTypes.array.isRequired,
 };
 

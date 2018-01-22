@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import PillContainer from '../../atoms/pills/pillContainer';
 import Header5 from '../../atoms/headers/Header5';
 
-const Skills = ({ data }) => {
+const Skills = (props) => {
 	return (
-		<div>
+		<Fragment>
 			{
-				data.map((skill, i) => {
+				props.data.map((skill, i) => {
 					return (
 						<div key={i} className="chamber--bottom">
 							<Header5 title={skill.name} />
@@ -17,11 +17,11 @@ const Skills = ({ data }) => {
 					);
 				})
 			}
-		</div>
+		</Fragment>
 	);
 };
 
-Skills.prototype = {
+Skills.protoTypes = {
 	data: PropTypes.object.isRequired,
 };
 

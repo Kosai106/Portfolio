@@ -1,20 +1,20 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Pill from '../../atoms/pills';
 
-const Profiles = ({ data, isLink }) => {
+const Profiles = (props) => {
 	return (
-		<div>
+		<Fragment>
 			{
-				data.map((item, i) => (
-					(isLink === true) ? <a key={i} target="_blank" href={item.url}><Pill data={item.network} /></a> : <Pill key={i} data={item.network} />
+			props.data.map((item, i) => (
+					(props.isLink === true) ? <a key={i} target="_blank" href={`${item.url}${item.username}`}><Pill data={item.network} /></a> : <Pill key={i} data={item.network} />
 				))
 			}
-		</div>
+		</Fragment>
 	);
 };
 
-Profiles.prototype = {
+Profiles.protoTypes = {
 	data: PropTypes.object.isRequired,
 	isLink: PropTypes.bool,
 };

@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const SocialIcon = ({ data }) => {
+const SocialIcon = (props) => {
+	const { data } = props
 	const name = data.network.toLowerCase();
 	return (
 		<li key={data.network}>
@@ -14,7 +15,7 @@ const SocialIcon = ({ data }) => {
 	);
 };
 
-SocialIcon.prototype = {
+SocialIcon.protoTypes = {
 	data: PropTypes.object.isRequired,
 };
 

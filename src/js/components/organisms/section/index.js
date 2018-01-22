@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 
 import Header5 from '../../atoms/headers/Header5';
 
-const Section = ({ title, size, noHeader, children }) => {
+const Section = (props) => {
+	const { title, size, noHeader, children } = props
 	const sectionSize = (selector) => {
 		switch (selector) {
 			case 1:
@@ -45,7 +46,7 @@ const Section = ({ title, size, noHeader, children }) => {
 	);
 };
 
-Section.prototype = {
+Section.protoTypes = {
 	title: PropTypes.string,
 	size: PropTypes.number,
 	noHeader: PropTypes.bool,
