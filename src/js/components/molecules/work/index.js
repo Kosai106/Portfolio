@@ -23,7 +23,7 @@ const Work = (props) => {
 	return (
 		<Fragment>
 			{
-				props.data.filter((job) => job.business !== 'game' || null || undefined).map((job, i) => {
+				props.data.filter((job) => job.type === 'web').map((job, i) => {
 					const highlights = job.highlights.map((highlight, x) => {
 						return <li key={x} className="typography--milli">{highlight}</li>;
 					});
