@@ -53,6 +53,17 @@
   },
   "work": [
     {
+      "company": "Algolia",
+      "position": "Frontend Engineer",
+      "website": "https://algolia.com/",
+      "type": "web",
+      "startDate": "2018-03-05",
+      "endDate": null,
+      "fulltime": true,
+      "summary": "At Algolia I am part of the visibility squad.",
+      "highlights": []
+    },
+    {
       "company": "Freelance",
       "position": "Designer & Developer",
       "website": "https://oesterkilde.dk/",
@@ -115,7 +126,7 @@
     },
     {
       "company": "Billetto",
-      "position": "Front-End Developer",
+      "position": "Frontend Developer",
       "website": "https://billetto.dk/",
       "type": "web",
       "startDate": "2015-11-01",
