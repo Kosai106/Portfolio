@@ -18,17 +18,19 @@ function fulltime(x) {
 		(x.fulltime === true || null) ? 'Full time' : 'Part time'
 	);
 }
+function highlights(x) {
+	return (
+		_.isEmpty(x.highlights) ? null : x.highlights.map((highlight, i) => {
+			return <li key={i} className="typography--milli">{highlight}</li>;
+		})
+	);
+}
 
 const Work = (props) => {
 	return (
 		<Fragment>
 			{
 				props.data.filter((job) => job.type === 'web').map((job, i) => {
-					const highlights = job.highlights.length > 0
-						? job.highlights.map((highlight, x) => {
-							return <li key={x} className="typography--milli">{highlight}</li>;
-						}) : null;
-
 					return (
 						<div key={i} className="chamber--bottom">
 							<span>
@@ -43,7 +45,7 @@ const Work = (props) => {
 							</span>
 							<p dangerouslySetInnerHTML={{ __html: job.summary }}></p>
 							<ul>
-								{highlights}
+								{highlights(job)}
 							</ul>
 						</div>
 					);
