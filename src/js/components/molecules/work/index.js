@@ -24,9 +24,10 @@ const Work = (props) => {
 		<Fragment>
 			{
 				props.data.filter((job) => job.type === 'web').map((job, i) => {
-					const highlights = job.highlights.map((highlight, x) => {
-						return <li key={x} className="typography--milli">{highlight}</li>;
-					});
+					const highlights = job.highlights.length > 0
+						? job.highlights.map((highlight, x) => {
+							return <li key={x} className="typography--milli">{highlight}</li>;
+						}) : null;
 
 					return (
 						<div key={i} className="chamber--bottom">
@@ -52,7 +53,7 @@ const Work = (props) => {
 	);
 };
 
-Work.protoTypes = {
+Work.propTypes = {
 	data: PropTypes.array.isRequired,
 };
 

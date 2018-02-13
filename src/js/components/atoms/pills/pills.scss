@@ -1,0 +1,12 @@
+@import '../../../../scss/modules/colors';
+
+li.pill {
+	list-style: none;
+	display: inline-block;
+	padding: 6px 12px;
+	margin: 4px;
+	background-color: $global-primary;
+	color: $global-white;
+	border-radius: 4px;
+	font-weight: bolder;
+}
