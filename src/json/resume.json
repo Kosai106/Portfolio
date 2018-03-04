@@ -57,7 +57,7 @@
       "position": "Frontend Engineer",
       "website": "https://algolia.com/",
       "type": "web",
-      "startDate": "2018-03-05",
+      "startDate": "2018-03-06",
       "endDate": null,
       "fulltime": true,
       "summary": "At Algolia I am part of the visibility squad.",
@@ -351,29 +351,55 @@
   ],
   "projects": [
     {
-      "name": "Event discovery app",
-      "entity": "Lively.",
-      "type": "Mobile Application",
-      "description": "Lively is a mobile app for discovering interesting events in your local area.",
-      "startDate": "2016-09-01",
-      "endDate": "2017-07-31",
-      "url": "https://play.google.com/store/apps/details?id=com.livelywebapp",
+      "name": "Artist Bundle",
+      "entity": "N/A",
+      "type": "Web Application",
+      "description": "Pay what you want for a top-notch bundle of tutorials and scripts by veteran artists - all for a good cause as most of the revenue goes to helping children in need.",
+      "startDate": "2018-02-09",
+      "endDate": null,
+      "url": "http://artistbundle.com/",
       "highlights": [
-        "Building a higly interactive experience in Rails.",
+        "Building a platform with the goal of supporting charity.",
+        "Utilising the latest technologies to ensure a futureproof product."
+      ],
+      "keywords": [
+        "React",
+        "SCSS",
+        "Webpack",
+        "Firebase",
+        "Git"
+      ],
+      "roles": [
+        "Lead Developer"
+      ]
+    },
+    {
+      "name": "Event discovery app",
+      "entity": "POI",
+      "type": "Mobile Application",
+      "description": "POI is a mobile app for discovering interesting events in your local area.",
+      "startDate": "2017-07-31",
+      "endDate": null,
+      "url": null,
+      "highlights": [
+        "Building a higly interactive experience in React-Native.",
         "Presenting a large dataset in an easily approachable way.",
         "Taking an idea from the concept phase all the way through to production."
       ],
       "keywords": [
-        "Ruby on Rails",
-        "Javascript",
-        "PostgreSQL",
-        "Amazon Web Services",
+        "React",
+        "React-Native",
+        "ES6",
+        "MongoDB",
+        "Express",
+        "NodeJS",
         "Sketch",
         "Git"
       ],
       "roles": [
+        "Founder",
         "Lead Developer",
-        "Designer"
+        "Lead Designer"
       ]
     },
     {
