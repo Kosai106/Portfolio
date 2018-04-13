@@ -1,3 +1,4 @@
+@import "vendor/normalize";
 @import "vendor/csswizardry-grids";
 @import "vendor/animate";
 @import "modules/all";
@@ -7,7 +8,7 @@
 
 body {
   background: $global-white;
-  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
   font-family: $family;
   font-size: 1em;
   height: 100%;

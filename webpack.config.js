@@ -4,7 +4,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-const ENV = process.env.NODE_ENV || 'development';
+const ENV = process.env.NODE_ENV;
+const isProd = ENV === 'production';
 const babelrc = require('./babel');
 
 const PATHS = {
@@ -19,51 +20,31 @@ const plugins = [
 	new ExtractTextPlugin({
 		filename: '[name].css',
 		allChunks: false,
-		disable: ENV !== 'production',
+		disable: !isProd,
 	}),
 ];
 
 const prodPlugins = [
 	...plugins,
-	new CopyWebpackPlugin([
-		{ from: 'img', to: 'img' },
-		{ from: 'index.html' },
-		{ from: 'json/resume.json' },
-		{ from: 'meta' },
-	], {
-		ignore: ['*.psd'],
-		copyUnmodified: true,
+	new CopyWebpackPlugin(
+		[
+      { from: 'img', to: 'img' },
+      { from: 'index.html' },
+      { from: 'json/resume.json' },
+      { from: 'meta' },
+		],
+		{
+			ignore: ['*.psd'],
+			copyUnmodified: true,
+		}
+  ),
+	new webpack.optimize.UglifyJsPlugin({
+		sourceMap: true,
+		exclude: /node_modules/,
 	}),
 	new webpack.optimize.CommonsChunkPlugin({
 		name: 'vendor',
 		minChunks: Infinity,
-	}),
-	new webpack.optimize.UglifyJsPlugin({
-		output: { comments: false },
-		mangle: true,
-		sourcemap: true,
-		compress: {
-			properties: true,
-			keep_fargs: false,
-			pure_getters: true,
-			collapse_vars: true,
-			warnings: false,
-			screw_ie8: true,
-			sequences: true,
-			dead_code: true,
-			drop_debugger: true,
-			comparisons: true,
-			conditionals: true,
-			evaluate: true,
-			booleans: true,
-			loops: true,
-			unused: true,
-			hoist_funs: true,
-			if_return: true,
-			join_vars: true,
-			cascade: true,
-			drop_console: false,
-		},
 	}),
 ];
 
@@ -103,15 +84,16 @@ module.exports = {
 						{
 							loader: 'css-loader',
 							options: {
-								sourceMap: true,
+								sourceMap: !isProd,
 								modules: false,
 								importLoaders: true,
+								minimize: isProd,
 							},
 						},
 						{
 							loader: 'postcss-loader',
 							options: {
-								sourceMap: 'inline',
+								sourceMap: !isProd,
 								plugins: () => {
 									return [autoprefixer({ browsers: ['> 1%', 'IE >= 10'] })];
 								},
@@ -120,7 +102,7 @@ module.exports = {
 						{
 							loader: 'sass-loader',
 							options: {
-								sourceMap: true,
+								sourceMap: !isProd,
 							},
 						},
 					],
@@ -132,11 +114,13 @@ module.exports = {
 			},
 		],
 	},
-	plugins: ENV === 'production' ? prodPlugins : plugins,
-	devtool: ENV === 'production' ? 'source-map' : 'eval',
+	plugins: isProd ? prodPlugins : plugins,
+	devtool: isProd ? false : 'eval',
 	devServer: {
 		port: 3000,
 		host: 'localhost',
+		open: true,
+		hot: true,
 		historyApiFallback: true,
 	},
 };
