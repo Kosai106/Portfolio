@@ -60,8 +60,12 @@
       "startDate": "2018-03-06",
       "endDate": null,
       "fulltime": true,
-      "summary": "At Algolia I am part of the visibility squad.",
-      "highlights": null
+      "summary": "At Algolia I'm responsible for ensuring consistency in our branding and design across projects, as well as writing clean, consistent and DRY code. To ensure this, I'm building internal tools , such as our design system, to ensure everyone keeps everything to our high standards.",
+      "highlights": [
+        "Maintaining and redesigning several pages across the website and products.",
+        "Building and improving internal tools to help increase workflow efficiency.",
+        "Developing a strong and robust design system."
+      ]
     },
     {
       "company": "Freelance",
