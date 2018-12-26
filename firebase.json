@@ -4,17 +4,19 @@
   },
   "hosting": {
     "public": "public",
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ],
+    "cleanUrls": true,
+    "trailingSlash": false,
     "redirects": [
       {
         "source": "/racer455.html",
         "destination": "https://medium.com/@oesterkilde/https-medium-com-oesterkilde-racer445s-sword-texturing-tutorial-ab9913d4893a",
         "type": 302
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
       }
     ]
   }
