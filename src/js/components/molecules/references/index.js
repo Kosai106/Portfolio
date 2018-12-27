@@ -9,7 +9,7 @@ const References = (props) => {
 					return (
 						<blockquote key={i}>
 							<p>{ref.reference}</p>
-							<span className="typography--milli"><em>- {ref.name}</em></span>
+							<span className="typography--milli"><em>- {ref.name}, {ref.work}</em></span>
 						</blockquote>
 					);
 				})

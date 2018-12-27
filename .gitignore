@@ -10,3 +10,4 @@ build/*
 public
 yarn.lock
 .firebase/
+src/static/*.zip

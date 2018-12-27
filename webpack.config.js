@@ -27,9 +27,10 @@ const prodPlugins = [
 	...plugins,
 	new CopyWebpackPlugin([
 		{ from: 'img', to: 'img' },
+		{ from: 'meta' },
+		{ from: 'static' },
 		{ from: 'index.html' },
 		{ from: 'json/resume.json' },
-		{ from: 'meta' },
 	], {
 		ignore: ['*.psd'],
 		copyUnmodified: true,

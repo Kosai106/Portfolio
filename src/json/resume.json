@@ -1,21 +1,21 @@
 {
   "basics": {
     "name": "Kevin Østerkilde",
-    "label": "Designer & Developer",
+    "label": "Frontend Engineer",
     "picture": "https://oesterkilde.dk/img/avatars/Kevin.jpg",
     "email": "kevin@oesterkilde.dk",
-    "phone": "+45 30221564",
+    "phone": "+33 0767599980",
     "website": "http://oesterkilde.dk/",
     "summary": "Kevin hails from the vikings in the north. He never really cared for institutional education but rather focused on self learning through books and online materials. Prior to getting his eyes opened up for web development, he was interested in 3D technology and it remains a hobby to this day. He’s got unique problem solving skills and can turn coffee into code faster than you can say \"<a href=\"https://www.youtube.com/watch?v=s-mOy8VUEBk\" target=\"_blank\">Kamelåså</a>\"!<br /><br />One of his biggest weaknesses however is his curious nature and interest in learning new technologies. This on the other hand, leads to far too many unfinished side-projects.",
     "location": {
-      "address": "Kildehuset 5 St. 5",
-      "postalCode": "2670",
-      "city": "Hundige",
-      "countryCode": "DK",
-      "region": "Sjælland",
+      "address": "17 Rue Notre Dame Des Victoires",
+      "postalCode": "75002",
+      "city": "Paris",
+      "countryCode": "FR",
+      "region": "Île-de-France",
       "coords": [
-        55.601711,
-        12.324866
+        48.8566,
+        2.3522
       ]
     },
     "profiles": [
@@ -342,14 +342,17 @@
   "references": [
     {
       "name": "Richard Palmer",
+      "work": "Appear Here Ltd",
       "reference": "Kevin provides quality work every time - he makes changes when asked, with a good understanding of what you want straight away.  Great colleague, highly recommended!"
     },
     {
       "name": "Andy Pottage",
+      "work": "Hashtag Marketing Ltd",
       "reference": "Having worked alongside Kev on a handful of projects and prototypes, he's shown initiative and drive to keep the projects moving in the right direction. He always had the project's best interests in mind and his creative flair and knowledge of various technologies means he's always a pleasure to work with."
     },
     {
       "name": "Inês D. Soares",
+      "work": "Fonehouse Group Ltd",
       "reference": "Kevin is highly skilled and has a great eye for detail. Always delivers excellence work and has a brilliant attitude working under pressure. It has been always a pleasure working with Kevin and I have no reservations in recommending him for future positions."
     }
   ],

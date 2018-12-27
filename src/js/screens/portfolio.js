@@ -34,7 +34,7 @@ class Portfolio extends Component {
 				<div className="container">
 					<div className="hero">
 						<h1 className="headline animated fadeIn">Kevin &Oslash;sterkilde</h1>
-						<p className="subline">Designer &amp; Developer</p>
+						<p className="subline">Frontend Engineer</p>
 
 						<hr className="seperator" />
 						<div className={toggleFormInverted}>
