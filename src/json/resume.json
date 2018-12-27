@@ -188,6 +188,11 @@
   ],
   "courses": [
     {
+      "title": "Testing Javascript - Pro Package",
+      "teacher": "Kent C. Dodds",
+      "company": "Egghead.io"
+    },
+    {
       "title": "Learn Node - Master Package",
       "teacher": "Wes Bos",
       "company": "Bostype Inc"
@@ -255,6 +260,7 @@
         "REST",
         "Firebase",
         "PostgreSQL",
+        "GraphQL",
         "Amazon Web Services",
         "C#",
         "Python"
@@ -281,10 +287,11 @@
       "keywords": [
         "Git",
         "SourceTree",
-        "Atom",
-        "Visual Studio Code",
-        "Grunt",
+        "VS Code",
         "Webpack",
+        "Babel",
+        "ESLint",
+        "Prettier",
         "HyperTerm",
         "Abstract"
       ]
@@ -298,6 +305,10 @@
     {
       "language": "English",
       "fluency": "Professional proficiency"
+    },
+    {
+      "language": "French",
+      "fluency": "Beginner"
     },
     {
       "language": "Italian",
