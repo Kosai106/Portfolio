@@ -13,10 +13,7 @@
       "city": "Paris",
       "countryCode": "FR",
       "region": "Île-de-France",
-      "coords": [
-        48.8566,
-        2.3522
-      ]
+      "coords": [48.8566, 2.3522]
     },
     "profiles": [
       {
@@ -168,9 +165,7 @@
       "startDate": "2014-02-24",
       "endDate": "2014-04-13",
       "gpa": null,
-      "courses": [
-        "Mobile Games Programming"
-      ]
+      "courses": ["Mobile Games Programming"]
     },
     {
       "institution": "Roskilde Tekniske Skole",
@@ -247,6 +242,7 @@
         "React",
         "React-Native",
         "Redux",
+        "GatsbyJS",
         "jQuery"
       ]
     },
@@ -254,13 +250,13 @@
       "name": "Back-End Development",
       "level": "Intermediate",
       "keywords": [
+        "NodeJS",
         "Ruby",
         "Ruby on Rails",
-        "NodeJS",
+        "GraphQL",
         "REST",
         "Firebase",
         "PostgreSQL",
-        "GraphQL",
         "Amazon Web Services",
         "C#",
         "Python"
@@ -341,13 +337,7 @@
     },
     {
       "name": "Games",
-      "keywords": [
-        "Playing",
-        "Creating",
-        "Modding",
-        "Streaming",
-        "Watching"
-      ]
+      "keywords": ["Playing", "Creating", "Modding", "Streaming", "Watching"]
     }
   ],
   "references": [
@@ -380,16 +370,8 @@
         "Building a platform with the goal of supporting charity.",
         "Utilising the latest technologies to ensure a futureproof product."
       ],
-      "keywords": [
-        "React",
-        "SCSS",
-        "Webpack",
-        "Firebase",
-        "Git"
-      ],
-      "roles": [
-        "Lead Developer"
-      ]
+      "keywords": ["React", "SCSS", "Webpack", "Firebase", "Git"],
+      "roles": ["Lead Developer"]
     },
     {
       "name": "Event discovery app",
@@ -414,11 +396,7 @@
         "Sketch",
         "Git"
       ],
-      "roles": [
-        "Founder",
-        "Lead Developer",
-        "Lead Designer"
-      ]
+      "roles": ["Founder", "Lead Developer", "Lead Designer"]
     },
     {
       "name": "Trainer dashboard front-end",
@@ -433,16 +411,8 @@
         "Matching the application to the provided mockup.",
         "Adding dynamic filters ontop of the view."
       ],
-      "keywords": [
-        "React",
-        "Javascript",
-        "Webpack",
-        "JSON",
-        "Lodash"
-      ],
-      "roles": [
-        "Developer"
-      ]
+      "keywords": ["React", "Javascript", "Webpack", "JSON", "Lodash"],
+      "roles": ["Developer"]
     }
   ],
   "meta": {
