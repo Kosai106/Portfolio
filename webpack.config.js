@@ -8,8 +8,8 @@ const ENV = process.env.NODE_ENV || 'development';
 const babelrc = require('./babel');
 
 const PATHS = {
-	src: path.resolve('./src'),
-	public: path.resolve('./public'),
+	src: path.resolve(__dirname, 'src'),
+	public: path.resolve(__dirname, 'public'),
 };
 
 const plugins = [
@@ -34,37 +34,6 @@ const prodPlugins = [
 	], {
 		ignore: ['*.psd'],
 		copyUnmodified: true,
-	}),
-	new webpack.optimize.CommonsChunkPlugin({
-		name: 'vendor',
-		minChunks: Infinity,
-	}),
-	new webpack.optimize.UglifyJsPlugin({
-		output: { comments: false },
-		mangle: true,
-		sourcemap: true,
-		compress: {
-			properties: true,
-			keep_fargs: false,
-			pure_getters: true,
-			collapse_vars: true,
-			warnings: false,
-			screw_ie8: true,
-			sequences: true,
-			dead_code: true,
-			drop_debugger: true,
-			comparisons: true,
-			conditionals: true,
-			evaluate: true,
-			booleans: true,
-			loops: true,
-			unused: true,
-			hoist_funs: true,
-			if_return: true,
-			join_vars: true,
-			cascade: true,
-			drop_console: false,
-		},
 	}),
 ];
 
@@ -93,8 +62,8 @@ module.exports = {
 				},
 			},
 			{
-				test: /\.json$/,
-				use: 'json-loader',
+				test: /\.(jpe?g|png|gif|webm)$/,
+				use: 'file-loader',
 			},
 			{
 				test: /\.(css|scss|sass)$/,
@@ -112,6 +81,7 @@ module.exports = {
 						{
 							loader: 'postcss-loader',
 							options: {
+								ident: 'postcss',
 								sourceMap: 'inline',
 								plugins: () => {
 									return [autoprefixer({ browsers: ['> 1%', 'IE >= 10'] })];
@@ -122,6 +92,7 @@ module.exports = {
 							loader: 'sass-loader',
 							options: {
 								sourceMap: true,
+								includePaths: [PATHS.src],
 							},
 						},
 					],
